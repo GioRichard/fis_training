@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Generics_Collections/examples/DequeDemo/DequeDemo.iml" filepath="$PROJECT_DIR$/Topic02/Generics_Collections/examples/DequeDemo/DequeDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Exceptions/Exercises/Exercise1/Exercise1.iml" filepath="$PROJECT_DIR$/Topic02/Exceptions/Exercises/Exercise1/Exercise1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Exceptions/Exercises/Exercises.iml" filepath="$PROJECT_DIR$/Topic02/Exceptions/Exercises/Exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FIS_JAVA.iml" filepath="$PROJECT_DIR$/.idea/FIS_JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Generics_Collections/examples/Generics/Generics.iml" filepath="$PROJECT_DIR$/Topic02/Generics_Collections/examples/Generics/Generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Exceptions/Practices/Practices.iml" filepath="$PROJECT_DIR$/Topic02/Exceptions/Practices/Practices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/examples/RoboCallExample08/RoboCallExample08.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/examples/RoboCallExample08/RoboCallExample08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/examples/SalesTxn08/SalesTxn08.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/examples/SalesTxn08/SalesTxn08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/examples/SalesTxn09/SalesTxn09.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/examples/SalesTxn09/SalesTxn09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/examples/SalesTxn09-Pkg/SalesTxn09-Pkg.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/examples/SalesTxn09-Pkg/SalesTxn09-Pkg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Exceptions/Solutions/Solutions.iml" filepath="$PROJECT_DIR$/Topic02/Exceptions/Solutions/Solutions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic01/Topic01_Proj1/Topic01_Proj1.iml" filepath="$PROJECT_DIR$/Topic01/Topic01_Proj1/Topic01_Proj1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic01/Topic01_Proj2/Topic01_Proj2.iml" filepath="$PROJECT_DIR$/Topic01/Topic01_Proj2/Topic01_Proj2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/examples/examples.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/examples/examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice1/practice1.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice1/practice1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/practices/practice1/practice11.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/practices/practice1/practice11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Generics_Collections/practices/practice1/practice12.iml" filepath="$PROJECT_DIR$/Topic02/Generics_Collections/practices/practice1/practice12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice1/practice13.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice1/practice13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/practices/practice1/practice14.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/practices/practice1/practice14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/solutions/practice1/practice15.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/solutions/practice1/practice15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Generics_Collections/solutions/practice1/practice16.iml" filepath="$PROJECT_DIR$/Topic02/Generics_Collections/solutions/practice1/practice16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/solutions/practice1/practice17.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/solutions/practice1/practice17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/practices/practice2/practice2.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/practices/practice2/practice2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Generics_Collections/solutions/practice2/practice21.iml" filepath="$PROJECT_DIR$/Topic02/Generics_Collections/solutions/practice2/practice21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/solutions/practice2/practice22.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/solutions/practice2/practice22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice2/practice23.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice2/practice23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/solutions/practice2/practice24.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/solutions/practice2/practice24.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice2/practice25.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice2/practice25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/practices/practice2/practice26.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/practices/practice2/practice26.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/Generics_Collections/practices/practice2/practice27.iml" filepath="$PROJECT_DIR$/Topic02/Generics_Collections/practices/practice2/practice27.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice3/practice3.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice3/practice3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/practices/practice3/practice31.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/practices/practice3/practice31.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice3/practice32.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice3/practice32.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/practices/practice3/practice33.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/practices/practice3/practice33.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/solutions/practice3/practice34.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/solutions/practice3/practice34.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/solutions/practice3/practice35.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/solutions/practice3/practice35.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice4/practice4.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice4/practice4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/solutions/practice4/practice41.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/solutions/practice4/practice41.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/solutions/practice4/practice42.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/solutions/practice4/practice42.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaBuiltIns/practices/practice4/practice43.iml" filepath="$PROJECT_DIR$/Topic02/LambdaBuiltIns/practices/practice4/practice43.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/practices/practice4/practice44.iml" filepath="$PROJECT_DIR$/Topic02/CollectionsStreamsFilters/practices/practice4/practice44.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice4/practice45.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice4/practice45.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice5/practice5.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice5/practice5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice5/practice51.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice5/practice51.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice6/practice6.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice6/practice6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice6/practice61.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice6/practice61.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice7/practice7.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice7/practice7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice7/practice71.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice7/practice71.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice8/practice8.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/solutions/practice8/practice8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice8/practice81.iml" filepath="$PROJECT_DIR$/Topic02/LambdaOperations/practices/practice8/practice81.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Topic01/Topic01_Proj1/test/test.iml" filepath="$PROJECT_DIR$/Topic01/Topic01_Proj1/test/test.iml" />
+    </modules>
+  </component>
+</project>
