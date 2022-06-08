@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cad71eeb-09c9-43a5-98c2-b6bc40db7461" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/schame.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/EmployeeDAOJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/IEmployeeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TestHomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/java/org/example/EmployeeDAOJdbcTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/CriminalCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/CriminalCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/Detective.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/Detective.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/TrackEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/TrackEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/CaseStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/CaseStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/CaseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/CaseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/EmploymentStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/EmploymentStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/Rank.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/Rank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/TrackAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/TrackAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic01/Topic01_Proj1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic01/Topic01_Proj1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/Excel_maven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic03/Excel_maven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/Excel_maven/src/main/java/apchePOI/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic03/Excel_maven/src/main/java/apchePOI/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/Excel_maven/src/main/java/apchePOI/ReadExcelExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic03/Excel_maven/src/main/java/apchePOI/ReadExcelExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/Excel_maven/src/main/java/apchePOI/WriteExcelExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic03/Excel_maven/src/main/java/apchePOI/WriteExcelExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/Topic03_Proj01/src/FilesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic03/Topic03_Proj01/src/FilesList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/Topic03_Proj01/tempet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic03/Topic03_Proj01/tempet.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/Topic03_Proj01/test/java/testNIO/NIOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic03/Topic03_Proj01/test/java/testNIO/NIOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/maven_demo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic03/maven_demo/maven_demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fis-training-06-2022" beforeDir="false" afterPath="$PROJECT_DIR$/../../fis-training-06-2022" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fis-training-test01" beforeDir="false" afterPath="$PROJECT_DIR$/../../fis-training-test01" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="TestNG Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AEJUUMGL5lW3vPTPAgzIbh3f79" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "TestNG",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG": "",
+    "create.test.in.the.same.root": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cad71eeb-09c9-43a5-98c2-b6bc40db7461" name="Changes" comment="" />
+      <created>1654568828230</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654568828230</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

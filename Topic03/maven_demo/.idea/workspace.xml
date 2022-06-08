@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb480b49-d1e6-4622-933a-d95b70af6634" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/src/main/java/apchePOI/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/src/main/java/apchePOI/ReadExcelExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/src/main/java/apchePOI/WriteExcelExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Excel_maven/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/Topic03_Proj01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/lib/SparseBitSet-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/lib/commons-codec-1.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/lib/commons-io-2.11.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/lib/log4j-api-2.17.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/lib/poi-3.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/lib/poi-ooxml-3.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/lib/xmlbeans-2.6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/src/FilesList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/tempet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Topic03_Proj01/test/java/testNIO/NIOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HomePage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/WicketApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TestHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/enums/CaseStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/CaseStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/enums/CaseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/CaseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/enums/EmploymentStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/EmploymentStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/enums/Rank.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/Rank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/enums/TrackAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/enums/TrackAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/CriminalCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/CriminalCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/Detective.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/Detective.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/TrackEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample/src/fis.java.bigexample/model/TrackEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Topic01/Topic01_Proj1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Topic01/Topic01_Proj1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fis-training-06-2022" beforeDir="false" afterPath="$PROJECT_DIR$/../../fis-training-06-2022" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fis-training-test01" beforeDir="false" afterPath="$PROJECT_DIR$/../../fis-training-test01" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ACu3wsgAMbebswo7SDBsK3RhX0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/FIS_JAVA/Topic03/Excel_maven"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb480b49-d1e6-4622-933a-d95b70af6634" name="Changes" comment="" />
+      <created>1654525694498</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654525694498</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
