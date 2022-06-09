@@ -3,11 +3,8 @@ package fis.java.bigexample.model;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-public class Evidence {
-    private Long id;
-    private int version;
-    private LocalDateTime createdAt;
-    private LocalDateTime modifiedAt;
+public class Evidence extends  AbstractEntity {
+
     private CriminalCase criminalCase;
     private Storage storage;
     private String number;
@@ -16,15 +13,8 @@ public class Evidence {
     private Boolean archived;
     private Set<TrackEntry> trackEntries;
 
-    public Evidence() {
-    }
-
-    public Evidence(Long id, int version, LocalDateTime createdAt, LocalDateTime modifiedAt, CriminalCase criminalCase, Storage storage, String number,
-                    String itemName, String notes, Boolean archived, Set<TrackEntry> trackEntries) {
-        this.id = id;
-        this.version = version;
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
+    public Evidence(CriminalCase criminalCase, Storage storage, String number, String itemName,
+                    String notes, Boolean archived, Set<TrackEntry> trackEntries) {
         this.criminalCase = criminalCase;
         this.storage = storage;
         this.number = number;
@@ -34,36 +24,16 @@ public class Evidence {
         this.trackEntries = trackEntries;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getVersion() {
-        return version;
-    }
-
-    public void setVersion(int version) {
-        this.version = version;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getModifiedAt() {
-        return modifiedAt;
-    }
-
-    public void setModifiedAt(LocalDateTime modifiedAt) {
-        this.modifiedAt = modifiedAt;
+    public Evidence(long id, int version, LocalDateTime createdAt, LocalDateTime modifiedAr, CriminalCase criminalCase,
+                    Storage storage, String number, String itemName, String notes, Boolean archived, Set<TrackEntry> trackEntries) {
+        super(id, version, createdAt, modifiedAr);
+        this.criminalCase = criminalCase;
+        this.storage = storage;
+        this.number = number;
+        this.itemName = itemName;
+        this.notes = notes;
+        this.archived = archived;
+        this.trackEntries = trackEntries;
     }
 
     public CriminalCase getCriminalCase() {
