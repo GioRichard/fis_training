@@ -16,7 +16,6 @@ public class DetectiveDAOMemImpl implements IDetectiveDAO {
 
     // Apply Singleton Pattern for DAO class
     private static DetectiveDAOMemImpl instance = new DetectiveDAOMemImpl();
-
     public static DetectiveDAOMemImpl getInstance(){
         return instance;
     }
