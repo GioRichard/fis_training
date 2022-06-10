@@ -10,8 +10,12 @@ import java.util.Optional;
 public class CriminalCaseDAO implements ICriminalCaseDAO {
     @Override
     public void save(CriminalCase criminalCase) {
-        MemoryDataSource.CRIMINAL_CASES.add(criminalCase);
+
+       MemoryDataSource.CRIMINAL_CASES.add(criminalCase);
+//        if(!MemoryDataSource.CRIMINAL_CASES.stream()
+//                .filter(item -> item.getId()))
     }
+
 
     @Override
     public Optional<CriminalCase> get(long id) {
