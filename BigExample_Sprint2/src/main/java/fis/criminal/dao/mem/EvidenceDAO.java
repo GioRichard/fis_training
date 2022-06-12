@@ -1,6 +1,7 @@
 package fis.criminal.dao.mem;
 
 import fis.criminal.dao.IEvidenceDAO;
+import fis.criminal.model.CriminalCase;
 import fis.criminal.model.Evidence;
 
 import java.util.List;
@@ -24,8 +25,9 @@ public class EvidenceDAO implements IEvidenceDAO {
     }
 
     @Override
-    public void update(Evidence evidence) {
+    public List<CriminalCase> update(Evidence evidence) {
 
+        return null;
     }
 
     @Override

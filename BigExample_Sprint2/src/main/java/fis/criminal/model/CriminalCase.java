@@ -129,7 +129,11 @@ public class CriminalCase extends AbstractEntity {
     public void replaceWith(CriminalCase criminalCase){
         this.notes = criminalCase.getNotes();
         this.status = criminalCase.getStatus();
-        //....
+        this.detailedDescription = criminalCase.getDetailedDescription();
+        this.shortDescription = criminalCase.getShortDescription();
+        this.assigned = criminalCase.getAssigned();
+        this.leadInvestigator = criminalCase.getLeadInvestigator();
+
     }
 
     @Override

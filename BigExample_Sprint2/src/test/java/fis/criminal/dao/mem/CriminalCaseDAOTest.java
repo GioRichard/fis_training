@@ -3,18 +3,26 @@ package fis.criminal.dao.mem;
 import fis.criminal.dao.ICriminalCaseDAO;
 import fis.criminal.model.CriminalCase;
 import lombok.extern.slf4j.Slf4j;
+import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+
+import static org.hamcrest.CoreMatchers.hasItem;
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 //@Slf4j
 public class CriminalCaseDAOTest {
         public static Logger LOG = LoggerFactory.getLogger(fis.criminal.dao.mem.CriminalCaseDAOTest.class);
-
+        public static ICriminalCaseDAO iCriminalCaseDAO = new CriminalCaseDAO();
         @BeforeAll
         public static void initTest(){
             LOG.info("initTest");
@@ -63,7 +71,6 @@ public class CriminalCaseDAOTest {
                 criminalCase.setId(id);
 
                 //A2
-                ICriminalCaseDAO iCriminalCaseDAO = new CriminalCaseDAO();
                 iCriminalCaseDAO.save(criminalCase);
 
                 //A3
@@ -80,7 +87,7 @@ public class CriminalCaseDAOTest {
                 criminalCase.setNumber("0001");
 
                 //A2
-                ICriminalCaseDAO iCriminalCaseDAO = new CriminalCaseDAO();
+
                 iCriminalCaseDAO.save(criminalCase);
 
                 //A3
@@ -98,17 +105,44 @@ public class CriminalCaseDAOTest {
 
         @Test
         void getAll() {
+            List<CriminalCase> actual = MemoryDataSource.CRIMINAL_CASES;
+            CriminalCase criminalCase1 =  new CriminalCase();
+            criminalCase1.setId(1);
+            CriminalCase criminalCase2 =  new CriminalCase();
+            criminalCase2.setId(2);
+            CriminalCase criminalCase3 =  new CriminalCase();
+            criminalCase3.setId(3);
+
+            assertThat(actual, hasSize(3));
+            assertThat(actual, instanceOf(List.class));
+            assertThat(actual,hasItem(criminalCase1));
+            assertThat(actual,hasItem(criminalCase2));
+            assertThat(actual,hasItem(criminalCase3));
+            assertThat(actual,contains(criminalCase1,criminalCase2,criminalCase3));
+
+
             LOG.info("test getAll");
         }
 
         @Test
         void update() {
+            //given
+            CriminalCase criminalCase1 =  new CriminalCase();
+            criminalCase1.setId(1);
+            //when  khi mk update
+            iCriminalCaseDAO.update(criminalCase1);
+            //then
+            //Asser
+
             LOG.info("test update");
         }
 
         @Test
         void delete() {
-            LOG.info("test delete");
+            //when
+            boolean result = iCriminalCaseDAO.delete(1);
+            assertEquals(false,result);
+
         }
 
         @AfterEach

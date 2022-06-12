@@ -1,5 +1,7 @@
 package fis.criminal.dao;
 
+import fis.criminal.model.CriminalCase;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +14,7 @@ public interface IDao<T> {
     List<T> getAll();
 
     //UPDATE
-    void update(T t);
+    List<CriminalCase> update(T t);
 
     //DELETE
     void delete(T t);

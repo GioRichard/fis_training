@@ -1,6 +1,7 @@
 package fis.criminal.dao.jdbc;
 
 import fis.criminal.dao.IDetectiveDAO;
+import fis.criminal.model.CriminalCase;
 import fis.criminal.model.Detective;
 
 import java.util.List;
@@ -23,8 +24,9 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
     }
 
     @Override
-    public void update(Detective detective) {
+    public List<CriminalCase> update(Detective detective) {
 
+        return null;
     }
 
     @Override

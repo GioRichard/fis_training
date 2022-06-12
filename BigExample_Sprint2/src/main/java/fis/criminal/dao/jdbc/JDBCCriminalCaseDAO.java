@@ -19,8 +19,9 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
     private final static Logger logger = LoggerFactory.getLogger(JDBCCriminalCaseDAO.class);
 
     @Override
-    public void delete(long id) {
-
+    public boolean delete(long id) {
+    return true;
+    //TODO
     }
 
     @Override
@@ -52,7 +53,23 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
     }
 
     @Override
-    public void update(CriminalCase criminalCase) {
+    public List<CriminalCase> update(CriminalCase criminalCase) {
+        List<CriminalCase> criminalCases = new ArrayList<>();
+        try (Connection con =
+                     DriverManager.getConnection (URL, USER_NAME, PASSWORD);
+             PreparedStatement stmt = con.prepareStatement("insert into evidence_system.criminal_case(version," +
+                     "number,short_description,long_description,createAt,modifyAt,notes) value (?,?,?,?,?,?,?)");
+
+             ResultSet rs = stmt.executeQuery ()) {
+
+            while (rs.next()) {
+                CriminalCase criminalcase = CriminalCaseMapper.get(rs);
+                if(criminalCase != null) criminalCases.add(criminalCase);
+            } // end of while
+        } catch (SQLException e) {
+            logger.error(e.toString());
+        } // end of try-with-resources
+        return criminalCases;
 
     }
 

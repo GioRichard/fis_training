@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 
 public class CriminalCaseMapper {
     public static final Logger logger = LoggerFactory.getLogger(CriminalCaseMapper.class);
@@ -15,10 +16,12 @@ public class CriminalCaseMapper {
         try {
             CriminalCase criminalCase = new CriminalCase();
 
-//            criminalCase.setId(criminalCaseResultSet.getLong("id"));
+            criminalCase.setId(criminalCaseResultSet.getLong("id"));
+            criminalCase.setVersion(criminalCaseResultSet.getInt("version"));
             criminalCase.setNumber(criminalCaseResultSet.getString("number"));
-//            criminalCase.setNumber(criminalCaseResultSet.getString("short_description"));
-//            criminalCase.setNumber(criminalCaseResultSet.getString("long_description"));
+            criminalCase.setShortDescription(criminalCaseResultSet.getString("short_description"));
+            criminalCase.setDetailedDescription(criminalCaseResultSet.getString("long_description"));
+
             //TODO add some add.
 
             return criminalCase;
