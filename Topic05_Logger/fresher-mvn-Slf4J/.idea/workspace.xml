@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d27b10f0-2c19-4c7a-94e3-7dcc1ac24c1d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/PhuongTrinhB2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample_Sprint2/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample_Sprint2/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample_Sprint2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample_Sprint2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample_Sprint2/src/main/java/fis/criminal/dao/jdbc/DatabaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample_Sprint2/src/main/java/fis/criminal/dao/jdbc/DatabaseUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample_Sprint2/src/main/java/fis/criminal/dao/mem/CriminalCaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample_Sprint2/src/main/java/fis/criminal/dao/mem/CriminalCaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample_Sprint2/src/test/java/fis/criminal/dao/mem/CriminalCaseDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample_Sprint2/src/test/java/fis/criminal/dao/mem/CriminalCaseDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample_Sprint2/target/classes/fis/criminal/dao/jdbc/DatabaseUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample_Sprint2/target/classes/fis/criminal/dao/jdbc/DatabaseUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample_Sprint2/target/classes/fis/criminal/dao/mem/CriminalCaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample_Sprint2/target/classes/fis/criminal/dao/mem/CriminalCaseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BigExample_Sprint2/target/test-classes/fis/criminal/dao/mem/CriminalCaseDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../BigExample_Sprint2/target/test-classes/fis/criminal/dao/mem/CriminalCaseDAOTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fis-training-06-2022" beforeDir="false" afterPath="$PROJECT_DIR$/../../fis-training-06-2022" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="29xxJnFbydmwrZKXm6KA7kzvBMC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FIS_JAVA/BigExample&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5448276&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FIS_Mini_Exercise\Topic07_SL4F_TBD\fresher-mvn-Slf4J\src\test\java\com\logback" />
+      <recent name="D:\FIS_Mini_Exercise\Topic07_SL4F_TBD\fresher-mvn-Slf4J\src\main\resources" />
+      <recent name="D:\FIS_Mini_Exercise\Topic07_SL4F_TBD\fresher-mvn-Slf4J\src\main\java\com\logback" />
+      <recent name="D:\FIS_Mini_Exercise\Topic07_SL4F_TBD\fresher-mvn-Slf4J\src\main\resources\xml" />
+      <recent name="D:\FIS_Mini_Exercise\Topic07_SL4F_TBD\fresher-mvn-Slf4J\src\main\java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.javacodegeeks.mvnslf4j" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.logback" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.slf4j.App" />
+      <module name="fresher-mvn-Slf4J" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.slf4j.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Log4jExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.log4j.Log4jExample" />
+      <module name="fresher-mvn-Slf4J" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.log4j.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaskingPatternLayoutExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.logback.MaskingPatternLayoutExample" />
+      <module name="slf4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.logback.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapAppenderIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="slf4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.logback.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.logback" />
+      <option name="MAIN_CLASS_NAME" value="com.logback.MapAppenderIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapAppenderUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="slf4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.logback.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.logback" />
+      <option name="MAIN_CLASS_NAME" value="com.logback.MapAppenderUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="slf4j" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="slf4j" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Log4jExample" />
+        <item itemvalue="Application.MaskingPatternLayoutExample" />
+        <item itemvalue="JUnit.MapAppenderUnitTest" />
+        <item itemvalue="JUnit.MapAppenderIntegrationTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d27b10f0-2c19-4c7a-94e3-7dcc1ac24c1d" name="Changes" comment="" />
+      <created>1654068469187</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654068469187</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

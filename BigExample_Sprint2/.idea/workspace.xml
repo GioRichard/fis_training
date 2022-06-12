@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e84ce1a-8b9a-4775-bc1b-b3e84613e04c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Topic05_Logger/fresher-mvn-Slf4J/src/test/java/PhuongTrinhB2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Topic05_Logger/fresher-mvn-Slf4J/src/test/java/PhuongTrinhB2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fis-training-06-2022" beforeDir="false" afterPath="$PROJECT_DIR$/../fis-training-06-2022" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2AK5H0ChrqB0IDvC38ixi0AS8bT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FIS_JAVA/BigExample_Sprint2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5448276&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FIS_Document\phuocnt-print2-prj\src\test\resources" />
+      <recent name="D:\FIS_Mini_Exercise\Sprint2 - DAO DB - UT - Log\phuocnt-print2-prj\src\test\resources" />
+      <recent name="D:\FIS_Mini_Exercise\Sprint2 - DAO DB - UT - Log\phuocnt-print2-prj\src\main\resources" />
+      <recent name="D:\FIS_Mini_Exercise\Sprint2 - DAO DB - UT - Log\phuocnt-print2-prj\src\main\java\fis" />
+      <recent name="D:\FIS_Mini_Exercise\Sprint2 - DAO DB - UT - Log\phuocnt-print2-prj\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="fis.criminal.dao.jdbc" />
+      <recent name="fis.criminal.dao.mem" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CriminalCaseDAOTest.delete">
+    <configuration name="CriminalCaseDAOTest$save.criminalWithId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BigExample_Sprint2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fis.criminal.dao.mem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fis.criminal.dao.mem.CriminalCaseDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="fis.criminal.dao.mem.CriminalCaseDAOTest$save" />
+      <option name="METHOD_NAME" value="criminalWithId(int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CriminalCaseDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BigExample_Sprint2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fis.criminal.dao.mem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fis.criminal.dao.mem" />
+      <option name="MAIN_CLASS_NAME" value="fis.criminal.dao.mem.CriminalCaseDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CriminalCaseDAOTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BigExample_Sprint2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fis.criminal.dao.mem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fis.criminal.dao.mem" />
+      <option name="MAIN_CLASS_NAME" value="fis.criminal.dao.mem.CriminalCaseDAOTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CriminalCaseDAOTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BigExample_Sprint2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fis.criminal.dao.mem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fis.criminal.dao.mem" />
+      <option name="MAIN_CLASS_NAME" value="fis.criminal.dao.mem.CriminalCaseDAOTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCCriminalCaseDAOTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BigExample_Sprint2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fis.criminal.dao.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fis.criminal.dao.jdbc" />
+      <option name="MAIN_CLASS_NAME" value="fis.criminal.dao.jdbc.JDBCCriminalCaseDAOTest" />
+      <option name="METHOD_NAME" value="getAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CriminalCaseDAOTest.delete" />
+        <item itemvalue="JUnit.CriminalCaseDAOTest" />
+        <item itemvalue="JUnit.JDBCCriminalCaseDAOTest.getAll" />
+        <item itemvalue="JUnit.CriminalCaseDAOTest.getAll" />
+        <item itemvalue="JUnit.CriminalCaseDAOTest$save.criminalWithId" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e84ce1a-8b9a-4775-bc1b-b3e84613e04c" name="Changes" comment="" />
+      <created>1654745347856</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654745347856</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BigExample_Sprint2$CriminalCaseDAOTest.ic" NAME="CriminalCaseDAOTest Coverage Results" MODIFIED="1654870550763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>fis.criminal.dao.mem.*</FILTER>
+    </SUITE>
+  </component>
+</project>

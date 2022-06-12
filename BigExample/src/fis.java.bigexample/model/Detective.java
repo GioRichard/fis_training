@@ -1,7 +1,7 @@
 package fis.java.bigexample.model;
 
-import fis.java.bigexample.enums.EmploymentStatus;
-import fis.java.bigexample.enums.Rank;
+import fis.java.bigexample.model.enums.EmploymentStatus;
+import fis.java.bigexample.model.enums.Rank;
 
 import java.time.LocalDateTime;
 import java.util.Set;

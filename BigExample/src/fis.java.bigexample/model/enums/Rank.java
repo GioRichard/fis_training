@@ -1,4 +1,4 @@
-package fis.java.bigexample.enums;
+package fis.java.bigexample.model.enums;
 
 public enum Rank {
     TRANEE,JUNIOR,SENIOR,INSPECTOR,CHEF_INSPECTOR;

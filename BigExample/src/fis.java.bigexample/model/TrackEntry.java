@@ -1,6 +1,6 @@
 package fis.java.bigexample.model;
 
-import fis.java.bigexample.enums.TrackAction;
+import fis.java.bigexample.model.enums.TrackAction;
 
 import java.time.LocalDateTime;
 

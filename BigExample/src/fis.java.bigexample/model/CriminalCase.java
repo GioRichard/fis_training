@@ -1,7 +1,7 @@
 package fis.java.bigexample.model;
 
-import fis.java.bigexample.enums.CaseStatus;
-import fis.java.bigexample.enums.CaseType;
+import fis.java.bigexample.model.enums.CaseStatus;
+import fis.java.bigexample.model.enums.CaseType;
 
 import java.time.LocalDateTime;
 import java.util.Set;
