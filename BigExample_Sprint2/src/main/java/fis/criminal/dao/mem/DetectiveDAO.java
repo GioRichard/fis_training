@@ -11,27 +11,34 @@ public class DetectiveDAO implements IDetectiveDAO {
 
     @Override
     public void save(Detective detective) {
-
+        MemoryDataSource.DETECTIVES.add(detective);
     }
 
     @Override
     public Optional<Detective> get(long id) {
-        return Optional.empty();
+        return MemoryDataSource.DETECTIVES.stream()
+                .filter(detective -> detective.getId() == id)
+                .findFirst();
     }
 
     @Override
     public List<Detective> getAll() {
-        return null;
+        return MemoryDataSource.DETECTIVES;
     }
 
     @Override
-    public List<CriminalCase> update(Detective detective) {
-
+    public List<CriminalCase> update(Detective newDetective) {
+        Optional<Detective> detective = get(newDetective.getId());
+        if(detective.isPresent()){
+            Detective updateDetective = detective.get();
+            updateDetective.replaceWith(newDetective);
+        }
         return null;
+
     }
 
     @Override
     public void delete(Detective detective) {
-
+        MemoryDataSource.DETECTIVES.remove(detective);
     }
 }

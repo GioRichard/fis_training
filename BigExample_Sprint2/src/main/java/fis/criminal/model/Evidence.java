@@ -1,5 +1,6 @@
 package fis.criminal.model;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class Evidence extends AbstractEntity {
@@ -68,4 +69,40 @@ public class Evidence extends AbstractEntity {
     public void setTrackEntries(Set<TrackEntry> trackEntries) {
         this.trackEntries = trackEntries;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Evidence)) return false;
+        Evidence evidence = (Evidence) o;
+        return Objects.equals(criminalCase, evidence.criminalCase) && Objects.equals(storage, evidence.storage) && Objects.equals(number, evidence.number) && Objects.equals(itemName, evidence.itemName) && Objects.equals(notes, evidence.notes) && Objects.equals(archived, evidence.archived) && Objects.equals(trackEntries, evidence.trackEntries);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(criminalCase, storage, number, itemName, notes, archived, trackEntries);
+    }
+
+    @Override
+    public String toString() {
+        return "Evidence{" +
+                "criminalCase=" + criminalCase +
+                ", storage=" + storage +
+                ", number='" + number + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", notes='" + notes + '\'' +
+                ", archived=" + archived +
+                ", trackEntries=" + trackEntries +
+                '}';
+    }
+    public void replaceWith(Evidence evidence){
+        this.criminalCase = evidence.getCriminalCase();
+        this.storage = evidence.getStorage();
+        this.number = evidence.getNumber();
+        this.itemName = evidence.getItemName();
+        this.notes = evidence.getNotes();
+        this.archived = evidence.getArchived();
+        this.trackEntries = evidence.getTrackEntries();
+    }
+
 }

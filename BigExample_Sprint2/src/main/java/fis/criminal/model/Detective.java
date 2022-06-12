@@ -4,6 +4,7 @@ import fis.criminal.model.enums.EmploymentStatus;
 import fis.criminal.model.enums.Rank;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 import java.util.Set;
 
 public class Detective extends AbstractEntity {
@@ -110,4 +111,49 @@ public class Detective extends AbstractEntity {
     public void setTrackEntries(Set<TrackEntry> trackEntries) {
         this.trackEntries = trackEntries;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Detective)) return false;
+        Detective detective = (Detective) o;
+        return Objects.equals(badgeNumber, detective.badgeNumber) && rank == detective.rank && Objects.equals(armed, detective.armed) && status == detective.status && Objects.equals(criminalCases, detective.criminalCases) && Objects.equals(trackEntries, detective.trackEntries) && Objects.equals(username, detective.username) && Objects.equals(firstName, detective.firstName) && Objects.equals(lastName, detective.lastName) && Objects.equals(password, detective.password) && Objects.equals(hiringDate, detective.hiringDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(badgeNumber, rank, armed, status, criminalCases, trackEntries, username, firstName, lastName, password, hiringDate);
+    }
+
+    @Override
+    public String toString() {
+        return "Detective{" +
+                "badgeNumber='" + badgeNumber + '\'' +
+                ", rank=" + rank +
+                ", armed=" + armed +
+                ", status=" + status +
+                ", criminalCases=" + criminalCases +
+                ", trackEntries=" + trackEntries +
+                ", username='" + username + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", hiringDate=" + hiringDate +
+                '}';
+    }
+
+    public void replaceWith(Detective detective){
+        this.armed = detective.getArmed();
+        this.badgeNumber = detective.getBadgeNumber();
+        this.status = detective.getStatus();
+        this.criminalCases = detective.getCriminalCases();
+        this.firstName = detective.getFirstName();
+        this.hiringDate = detective.getHiringDate();
+        this.lastName = detective.getLastName();
+        this.username = detective.getUsername();
+        this.lastName = detective.getLastName();
+        this.trackEntries = detective.getTrackEntries();
+        this.rank = detective.getRank();
+    }
+
 }
