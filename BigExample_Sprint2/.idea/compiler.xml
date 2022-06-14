@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tt" />
         <module name="BigExample" />
-        <module name="phuocnt-print2-prj" />
+        <module name="BigExampleSprint2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

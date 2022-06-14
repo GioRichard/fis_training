@@ -1,7 +1,6 @@
 package fis.criminal.dao.mem;
 
 import fis.criminal.dao.IEvidenceDAO;
-import fis.criminal.model.CriminalCase;
 import fis.criminal.model.Detective;
 import fis.criminal.model.Evidence;
 
@@ -30,7 +29,7 @@ public class EvidenceDAO implements IEvidenceDAO {
     }
 
     @Override
-    public List<CriminalCase> update(Evidence newEvidence) {
+    public List<Evidence> update(Evidence newEvidence) {
 
         Optional<Evidence> detective = get(newEvidence.getId());
         if(detective.isPresent()){

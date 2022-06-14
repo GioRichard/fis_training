@@ -2,6 +2,7 @@ package fis.criminal.dao.mem;
 
 import fis.criminal.dao.ICriminalCaseDAO;
 import fis.criminal.model.CriminalCase;
+import fis.criminal.model.Detective;
 
 import java.util.List;
 import java.util.Optional;

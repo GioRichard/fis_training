@@ -1,7 +1,6 @@
 package fis.criminal.dao.mem;
 
 import fis.criminal.dao.IDetectiveDAO;
-import fis.criminal.model.CriminalCase;
 import fis.criminal.model.Detective;
 
 import java.util.List;
@@ -27,7 +26,7 @@ public class DetectiveDAO implements IDetectiveDAO {
     }
 
     @Override
-    public List<CriminalCase> update(Detective newDetective) {
+    public List<Detective> update(Detective newDetective) {
         Optional<Detective> detective = get(newDetective.getId());
         if(detective.isPresent()){
             Detective updateDetective = detective.get();
