@@ -1,6 +1,7 @@
 package fis.criminal.dao.jdbc;
 
 import fis.criminal.dao.IDetectiveDAO;
+import fis.criminal.dao.mem.MemoryDataSource;
 import fis.criminal.model.Detective;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +17,28 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
 
     @Override
     public void save(Detective detective) {
+        try(Connection con = DatabaseUtility.getConnection()) {
+            PreparedStatement stmt =
+                    con.prepareStatement(" INSERT INTO criminalcase VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            stmt.setLong(1,detective.getId());
+            stmt.setInt(2,detective.getVersion());
+            stmt.setDate(3, Date.valueOf(detective.getCreatedAt().toLocalDate()));
+            stmt.setDate(4, Date.valueOf(detective.getModifiedAt().toLocalDate()));
+            stmt.setString(5,detective.getUsername());
+            stmt.setString(6,detective.getFirstName());
+            stmt.setString(7,detective.getLastName());
+            stmt.setString(8,detective.getPassword());
+            stmt.setDate(9,Date.valueOf(detective.getHiringDate().toLocalDate()));
+            stmt.setString(10,detective.getBadgeNumber());
+            stmt.setString(11,detective.getRank().toString());
+            stmt.setBoolean(12,detective.getArmed());
+            stmt.setString(1,detective.getStatus().toString());
 
+
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.error(ex.toString());
+        }
     }
 
     @Override
@@ -64,12 +86,44 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
 
     @Override
     public List<Detective> update(Detective detective) {
+        try(Connection con = DatabaseUtility.getConnection()) {
+            PreparedStatement stmt =
+                    con.prepareStatement("UPDATE detective " +
+                            "SET version = ?,createdAt = ?, modifiedAt = ?, username = ?, firstName = ?, " +
+                            "lastName = ?, pw = ?" +
+                            ",hiringDate = ?, badgeNumber = ?, rankOfDetective = ?, armed = ?, status =? WHERE id = ?");
+            stmt.setInt(1,detective.getVersion());
+            stmt.setDate(2, Date.valueOf(detective.getCreatedAt().toLocalDate()));
+            stmt.setDate(3, Date.valueOf(detective.getModifiedAt().toLocalDate()));
+            stmt.setString(4,detective.getUsername());
+            stmt.setString(5,detective.getFirstName());
+            stmt.setString(6,detective.getLastName());
+            stmt.setString(7,detective.getPassword());
+            stmt.setDate(8,Date.valueOf(detective.getHiringDate().toLocalDate()));
+            stmt.setString(9,detective.getBadgeNumber());
+            stmt.setString(10,detective.getRank().toString());
+            stmt.setBoolean(11,detective.getArmed());
+            stmt.setString(12,detective.getStatus().toString());
+            stmt.setLong(13,detective.getId());
 
-        return null;
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.error(ex.toString());
+        }
+
+        return MemoryDataSource.DETECTIVES;
     }
 
     @Override
     public void delete(Detective detective) {
+        try(Connection con = DatabaseUtility.getConnection()) {
+            PreparedStatement stmt =
+                    con.prepareStatement("DELETE FROM detective WHERE id = ?");
+            stmt.setLong(1,detective.getId());
+            stmt.executeUpdate();
 
+        }catch (Exception ex) {
+            logger.error(ex.toString());
+        }
     }
 }
