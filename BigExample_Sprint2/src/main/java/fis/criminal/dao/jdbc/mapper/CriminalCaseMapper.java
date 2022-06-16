@@ -1,5 +1,7 @@
-package fis.criminal.dao.jdbc;
+package fis.criminal.dao.jdbc.mapper;
 
+import fis.criminal.dao.jdbc.JDBCDetectiveDAO;
+import fis.criminal.dao.jdbc.utils;
 import fis.criminal.model.CriminalCase;
 
 import fis.criminal.model.Detective;
@@ -10,12 +12,11 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 public class CriminalCaseMapper {
     public static final Logger logger = LoggerFactory.getLogger(CriminalCaseMapper.class);
-    public static  final JDBCDetectiveDAO  jdbcDetectiveDAAO = new JDBCDetectiveDAO();
+    public static  final JDBCDetectiveDAO jdbcDetectiveDAAO = new JDBCDetectiveDAO();
     public static CriminalCase get(ResultSet criminalCaseResultSet){
         try {
             CriminalCase criminalCase = new CriminalCase();

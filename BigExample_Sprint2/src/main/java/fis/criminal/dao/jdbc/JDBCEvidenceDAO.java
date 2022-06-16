@@ -1,20 +1,18 @@
 package fis.criminal.dao.jdbc;
 
 import fis.criminal.dao.IEvidenceDAO;
+import fis.criminal.dao.jdbc.mapper.EvidenceMapper;
 import fis.criminal.dao.mem.MemoryDataSource;
 import fis.criminal.model.Evidence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.List;
 import java.util.Optional;
 
 public class JDBCEvidenceDAO implements IEvidenceDAO {
-    private final static Logger logger = LoggerFactory.getLogger(JDBCCriminalCaseDAO.class);
+    private final static Logger logger = LoggerFactory.getLogger(JDBCEvidenceDAO.class);
 
     @Override
     public void save(Evidence evidence) {
@@ -63,11 +61,38 @@ public class JDBCEvidenceDAO implements IEvidenceDAO {
 
     @Override
     public List<Evidence> update(Evidence evidence) {
-        return null;
+        try(Connection con = DatabaseUtility.getConnection()) {
+            PreparedStatement stmt =
+                    con.prepareStatement("UPDATE evidence " +
+                            "SET version = ?,createdAt = ?, modifiedAt = ?, number = ?, itemName = ?, " +
+                            "note = ?, archived = ? WHERE id = ?");
+            stmt.setInt(1,evidence.getVersion());
+            stmt.setDate(2, Date.valueOf(evidence.getCreatedAt().toLocalDate()));
+            stmt.setDate(3, Date.valueOf(evidence.getModifiedAt().toLocalDate()));
+            stmt.setString(4,evidence.getNumber());
+            stmt.setString(5,evidence.getItemName());
+            stmt.setString(6,evidence.getNotes());
+            stmt.setBoolean(7,evidence.getArchived());
+            stmt.setLong(8,evidence.getId());
+
+            stmt.executeUpdate();
+        }catch (Exception ex) {
+            logger.error(ex.toString());
+        }
+
+        return MemoryDataSource.EVIDENCES;
     }
 
     @Override
     public void delete(Evidence evidence) {
+        try(Connection con = DatabaseUtility.getConnection()) {
+            PreparedStatement stmt =
+                    con.prepareStatement("DELETE FROM evidence WHERE id = ?");
+            stmt.setLong(1,evidence.getId());
+            stmt.executeUpdate();
 
+        }catch (Exception ex) {
+            logger.error(ex.toString());
+        }
     }
 }

@@ -1,6 +1,8 @@
-package fis.criminal.dao.jdbc;
+package fis.criminal.dao.jdbc.mapper;
 
 
+import fis.criminal.dao.jdbc.mapper.CriminalCaseMapper;
+import fis.criminal.dao.jdbc.utils;
 import fis.criminal.model.Evidence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +24,6 @@ public class EvidenceMapper {
             evidence.setModifiedAt(utils.covertLocalDateTimeToDate(evidenceResultSet.getDate("modifiedAt")));
             evidence.setItemName(evidenceResultSet.getString("itemName"));
             evidence.setNotes(evidenceResultSet.getString("note"));
-            evidence.setItemName(evidenceResultSet.getString("itemName"));
             evidence.setArchived(evidenceResultSet.getBoolean("archived"));
 
             return evidence;

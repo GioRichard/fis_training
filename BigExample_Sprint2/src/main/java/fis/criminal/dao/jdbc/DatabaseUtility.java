@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class DatabaseUtility {
-    public final static String URL = "jdbc:mysql://localhost:3306/evidence_system";
+    public final static String URL = "jdbc:mysql://localhost:3306/system_db";
     public final static String USER_NAME = "root";
     public final static String PASSWORD = "root123";
 

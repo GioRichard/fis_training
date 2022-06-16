@@ -1,6 +1,7 @@
 package fis.criminal.dao.jdbc;
 
 import fis.criminal.dao.IDetectiveDAO;
+import fis.criminal.dao.jdbc.mapper.DetectiveMapper;
 import fis.criminal.dao.mem.MemoryDataSource;
 import fis.criminal.model.Detective;
 import org.slf4j.Logger;
@@ -13,13 +14,13 @@ import java.util.Optional;
 
 public class JDBCDetectiveDAO implements IDetectiveDAO {
 
-    private final static Logger logger = LoggerFactory.getLogger(JDBCCriminalCaseDAO.class);
+    private final static Logger logger = LoggerFactory.getLogger(JDBCDetectiveDAO.class);
 
     @Override
     public void save(Detective detective) {
         try(Connection con = DatabaseUtility.getConnection()) {
             PreparedStatement stmt =
-                    con.prepareStatement(" INSERT INTO criminalcase VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                    con.prepareStatement(" INSERT INTO detective VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
             stmt.setLong(1,detective.getId());
             stmt.setInt(2,detective.getVersion());
             stmt.setDate(3, Date.valueOf(detective.getCreatedAt().toLocalDate()));
@@ -32,8 +33,7 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
             stmt.setString(10,detective.getBadgeNumber());
             stmt.setString(11,detective.getRank().toString());
             stmt.setBoolean(12,detective.getArmed());
-            stmt.setString(1,detective.getStatus().toString());
-
+            stmt.setString(13,detective.getStatus().toString());
 
             stmt.executeUpdate();
         }catch (Exception ex) {

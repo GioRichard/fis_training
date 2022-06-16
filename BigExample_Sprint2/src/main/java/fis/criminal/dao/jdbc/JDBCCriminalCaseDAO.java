@@ -1,16 +1,15 @@
 package fis.criminal.dao.jdbc;
 
 import fis.criminal.dao.ICriminalCaseDAO;
+import fis.criminal.dao.jdbc.mapper.CriminalCaseMapper;
 import fis.criminal.dao.mem.MemoryDataSource;
 import fis.criminal.model.CriminalCase;
 
 
-import fis.criminal.model.Detective;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,9 +19,7 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
 
     @Override
     public boolean delete(long id) {
-
-    return true;
-    //TODO
+        return MemoryDataSource.CRIMINAL_CASES.remove(id);
     }
 
     @Override
@@ -120,7 +117,7 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
     public void delete(CriminalCase criminalCase) {
         try(Connection con = DatabaseUtility.getConnection()) {
             PreparedStatement stmt =
-                    con.prepareStatement("DELETE FROM criminalcase WHERE criminal_case_id = ?");
+                    con.prepareStatement("DELETE FROM criminalcase WHERE id = ?");
             stmt.setLong(1,criminalCase.getId());
             stmt.executeUpdate();
 

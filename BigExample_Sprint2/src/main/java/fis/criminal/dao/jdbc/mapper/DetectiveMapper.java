@@ -1,8 +1,8 @@
-package fis.criminal.dao.jdbc;
+package fis.criminal.dao.jdbc.mapper;
 
-import fis.criminal.model.CriminalCase;
+import fis.criminal.dao.jdbc.JDBCCriminalCaseDAO;
+import fis.criminal.dao.jdbc.utils;
 import fis.criminal.model.Detective;
-import fis.criminal.model.enums.CaseStatus;
 import fis.criminal.model.enums.EmploymentStatus;
 import fis.criminal.model.enums.Rank;
 import org.slf4j.Logger;
@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Optional;
 
 public class DetectiveMapper {
     public  static final Logger logger = LoggerFactory.getLogger(DetectiveMapper.class);
