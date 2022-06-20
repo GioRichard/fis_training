@@ -1,4 +1,4 @@
-package fis.bank.criminalsystemmanagement.model;
+package fis.bank.model;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
-package fis.bank.criminalsystemmanagement.model;
+package fis.bank.model;
 
-import fis.bank.criminalsystemmanagement.model.enums.EmploymentStatus;
-import fis.bank.criminalsystemmanagement.model.enums.Rank;
+import fis.bank.model.enums.EmploymentStatus;
+import fis.bank.model.enums.Rank;
 import lombok.Data;
 
 import javax.persistence.*;

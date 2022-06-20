@@ -1,10 +1,11 @@
-package fis.bank.criminalsystemmanagement.model;
+package fis.bank.model;
 
-import fis.bank.criminalsystemmanagement.model.enums.CaseStatus;
-import fis.bank.criminalsystemmanagement.model.enums.CaseType;
+import fis.bank.model.enums.CaseStatus;
+import fis.bank.model.enums.CaseType;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Data
@@ -24,7 +25,33 @@ public class CriminalCase  extends  AbstractEntity{
     @OneToMany(mappedBy = "criminalCase", cascade = CascadeType.ALL)
     Set<Evidence> evidences;
 
-    public CriminalCase() {
+    public CriminalCase(long l, int i, Object o, Object o1, String s, String dai, String ngan, Object o2, String note1, Object o3, Object o4) {
+    }
+
+    public CriminalCase(String number, CaseType type, String shortDescription, String detailedDescription,
+                        CaseStatus status, String notes, Detective leadInvestigator) {
+        this.number = number;
+        this.type = type;
+        this.shortDescription = shortDescription;
+        this.detailedDescription = detailedDescription;
+        this.status = status;
+        this.notes = notes;
+        this.leadInvestigator = leadInvestigator;
+    }
+
+    public CriminalCase(long id, int version, LocalDateTime createdAt, LocalDateTime modifiedAt, String number,
+                        CaseType type, String shortDescription, String detailedDescription, CaseStatus status, String notes,
+                        Set<Detective> detectives, Detective leadInvestigator, Set<Evidence> evidences) {
+        super(id, version, createdAt, modifiedAt);
+        this.number = number;
+        this.type = type;
+        this.shortDescription = shortDescription;
+        this.detailedDescription = detailedDescription;
+        this.status = status;
+        this.notes = notes;
+        this.detectives = detectives;
+        this.leadInvestigator = leadInvestigator;
+        this.evidences = evidences;
     }
 
     public Set<Detective> getDetectives() {

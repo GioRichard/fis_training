@@ -1,4 +1,4 @@
-package fis.bank.criminalsystemmanagement.model.enums;
+package fis.bank.model.enums;
 
 public enum Rank {
     TRAINEE,

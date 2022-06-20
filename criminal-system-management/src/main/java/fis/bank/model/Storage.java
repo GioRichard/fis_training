@@ -1,8 +1,7 @@
-package fis.bank.criminalsystemmanagement.model;
+package fis.bank.model;
 
 import lombok.Data;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;

@@ -1,6 +1,6 @@
-package fis.bank.criminalsystemmanagement.model;
+package fis.bank.model;
 
-import fis.bank.criminalsystemmanagement.model.enums.TrackAction;
+import fis.bank.model.enums.TrackAction;
 import lombok.Data;
 
 import javax.persistence.*;
