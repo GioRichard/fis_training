@@ -1,10 +1,9 @@
 package fis.bank.criminalsystemmanagement.model;
 
-import lombok.Data;
-
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -16,7 +15,7 @@ public class Storage extends AbstractEntity{
     @OneToOne(mappedBy = "storage")
     private Evidence evidence;
 
-    public Storage() {
+    public Storage(long l, String s) {
     }
 
     public String getName() {
@@ -40,6 +39,26 @@ public class Storage extends AbstractEntity{
     }
 
     public void setEvidence(Evidence evidence) {
+        this.evidence = evidence;
+    }
+
+    public Storage(String name, String location, Evidence evidence) {
+        this.name = name;
+        this.location = location;
+        this.evidence = evidence;
+    }
+
+    public Storage() {
+    }
+
+    public Storage(long id, int version, LocalDateTime createdAt, LocalDateTime modifiedAt) {
+        super(id, version, createdAt, modifiedAt);
+    }
+
+    public Storage(long id, int version, LocalDateTime createdAt, LocalDateTime modifiedAt, String name, String location, Evidence evidence) {
+        super(id, version, createdAt, modifiedAt);
+        this.name = name;
+        this.location = location;
         this.evidence = evidence;
     }
 }
