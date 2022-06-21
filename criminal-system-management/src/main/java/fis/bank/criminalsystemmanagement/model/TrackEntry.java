@@ -1,11 +1,11 @@
-package fis.bank.model;
+package fis.bank.criminalsystemmanagement.model;
 
-import fis.bank.model.enums.TrackAction;
+import fis.bank.criminalsystemmanagement.model.enums.TrackAction;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-@Data
+
 @Entity
 @Table(name = "trackentry")
 public class TrackEntry extends AbstractEntity{

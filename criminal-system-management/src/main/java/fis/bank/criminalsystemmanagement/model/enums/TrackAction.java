@@ -1,4 +1,4 @@
-package fis.bank.model.enums;
+package fis.bank.criminalsystemmanagement.model.enums;
 
 public enum TrackAction {
     SUBMITTED,

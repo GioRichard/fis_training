@@ -2,7 +2,7 @@ package fis.bank.criminalsystemmanagement.service.impl;
 
 import fis.bank.criminalsystemmanagement.repository.EvidenceRepository;
 import fis.bank.criminalsystemmanagement.service.EvidenceService;
-import fis.bank.model.Evidence;
+import fis.bank.criminalsystemmanagement.model.Evidence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

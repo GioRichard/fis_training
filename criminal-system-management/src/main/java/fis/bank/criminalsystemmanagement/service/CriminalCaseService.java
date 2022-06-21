@@ -1,6 +1,6 @@
 package fis.bank.criminalsystemmanagement.service;
 
-import fis.bank.model.CriminalCase;
+import fis.bank.criminalsystemmanagement.model.CriminalCase;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,6 +1,6 @@
 package fis.bank.criminalsystemmanagement.repository;
 
-import fis.bank.model.Storage;
+import fis.bank.criminalsystemmanagement.model.Storage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

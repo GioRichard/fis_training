@@ -1,4 +1,4 @@
-package fis.bank.model;
+package fis.bank.criminalsystemmanagement.model;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Data
+
 @Entity
 @Table(name = "storage")
 public class Storage extends AbstractEntity{

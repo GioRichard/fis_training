@@ -1,4 +1,4 @@
-package fis.bank.model;
+package fis.bank.criminalsystemmanagement.model;
 
 import lombok.Data;
 
@@ -7,8 +7,7 @@ import java.time.LocalDateTime;
 
 import static javax.persistence.InheritanceType.SINGLE_TABLE;
 
-@Data
-@Inheritance(strategy = SINGLE_TABLE)
+@MappedSuperclass
 
 public class AbstractEntity {
     @Id

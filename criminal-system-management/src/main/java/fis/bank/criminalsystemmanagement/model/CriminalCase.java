@@ -1,14 +1,14 @@
-package fis.bank.model;
+package fis.bank.criminalsystemmanagement.model;
 
-import fis.bank.model.enums.CaseStatus;
-import fis.bank.model.enums.CaseType;
-import lombok.Data;
+import fis.bank.criminalsystemmanagement.model.enums.CaseStatus;
+import fis.bank.criminalsystemmanagement.model.enums.CaseType;
+
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-@Data
+
 @Entity
 @Table(name = "criminalcase")
 public class CriminalCase  extends  AbstractEntity{
@@ -20,6 +20,9 @@ public class CriminalCase  extends  AbstractEntity{
     String notes;
     @ManyToMany(mappedBy = "criminalCases")
     Set<Detective> detectives;
+
+    @OneToOne
+    @JoinColumn(name = "criminalCase")
     Detective leadInvestigator;
 
     @OneToMany(mappedBy = "criminalCase", cascade = CascadeType.ALL)

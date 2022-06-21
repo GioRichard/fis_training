@@ -1,18 +1,19 @@
-package fis.bank.model;
+package fis.bank.criminalsystemmanagement.model;
 
-import fis.bank.model.enums.EmploymentStatus;
-import fis.bank.model.enums.Rank;
+import fis.bank.criminalsystemmanagement.model.enums.EmploymentStatus;
+import fis.bank.criminalsystemmanagement.model.enums.Rank;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
-@Data
+
 @Entity
 @Table(name = "detective")
 public class Detective extends AbstractEntity{
     String badgeNumber;
+    @Column(name = "`rank`")
     Rank rank;
     Boolean armed;
     EmploymentStatus status;
@@ -22,8 +23,13 @@ public class Detective extends AbstractEntity{
             joinColumns = @JoinColumn(name = "detectiveId"),
             inverseJoinColumns = @JoinColumn(name = "criminalCaseId"))
     Set<CriminalCase> criminalCases;
+
     @OneToMany(mappedBy = "detective", cascade = CascadeType.ALL)
     Set<TrackEntry> trackEntries;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "leadInvestigator")
+      CriminalCase criminalCase;
     String username;
     String firstName;
     String lastName;
@@ -31,8 +37,6 @@ public class Detective extends AbstractEntity{
     LocalDateTime hiringDate;
     public Detective() {
     }
-
-
 
     public String getUsername() {
         return username;

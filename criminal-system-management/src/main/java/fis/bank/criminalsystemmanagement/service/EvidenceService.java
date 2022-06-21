@@ -2,7 +2,7 @@ package fis.bank.criminalsystemmanagement.service;
 
 
 
-import fis.bank.model.Evidence;
+import fis.bank.criminalsystemmanagement.model.Evidence;
 
 import java.util.List;
 import java.util.Optional;
