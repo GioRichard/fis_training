@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tt" />
-        <module name="BigExample" />
         <module name="BigExampleSprint2" />
+        <module name="BigExample" />
+        <module name="phuocnt-print2-prj" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

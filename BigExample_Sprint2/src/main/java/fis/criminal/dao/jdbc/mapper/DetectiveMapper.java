@@ -1,7 +1,7 @@
 package fis.criminal.dao.jdbc.mapper;
 
 import fis.criminal.dao.jdbc.JDBCCriminalCaseDAO;
-import fis.criminal.dao.jdbc.utils;
+import fis.criminal.dao.jdbc.Utils;
 import fis.criminal.model.Detective;
 import fis.criminal.model.enums.EmploymentStatus;
 import fis.criminal.model.enums.Rank;
@@ -21,13 +21,13 @@ public class DetectiveMapper {
             detective.setId(detectiveResultSet.getLong("id"));
             detective.setArmed(detectiveResultSet.getBoolean("armed"));
             detective.setVersion(detectiveResultSet.getInt("version"));
-            detective.setCreatedAt(utils.covertLocalDateTimeToDate(detectiveResultSet.getDate("createdAt")));
-            detective.setModifiedAt(utils.covertLocalDateTimeToDate(detectiveResultSet.getDate("modifiedAt")));
+            detective.setCreatedAt(Utils.covertLocalDateTimeToDate(detectiveResultSet.getDate("createdAt")));
+            detective.setModifiedAt(Utils.covertLocalDateTimeToDate(detectiveResultSet.getDate("modifiedAt")));
             detective.setUsername(detectiveResultSet.getString("username"));
             detective.setFirstName(detectiveResultSet.getString("firstName"));
             detective.setLastName(detectiveResultSet.getString("lastName"));
             detective.setPassword(detectiveResultSet.getString("pw"));
-            detective.setHiringDate(utils.covertLocalDateTimeToDate(detectiveResultSet.getDate("hiringDate")));
+            detective.setHiringDate(Utils.covertLocalDateTimeToDate(detectiveResultSet.getDate("hiringDate")));
             detective.setBadgeNumber(detectiveResultSet.getString("badgeNumber"));
             detective.setRank(Rank.valueOf(detectiveResultSet.getString("rankOfDetective")));
             detective.setStatus(EmploymentStatus.valueOf(detectiveResultSet.getString("status")));

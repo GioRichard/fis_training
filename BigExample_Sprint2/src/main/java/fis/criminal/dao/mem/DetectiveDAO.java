@@ -37,7 +37,8 @@ public class DetectiveDAO implements IDetectiveDAO {
     }
 
     @Override
-    public void delete(Detective detective) {
+    public Detective delete(Detective detective) {
         MemoryDataSource.DETECTIVES.remove(detective);
+        return null;
     }
 }

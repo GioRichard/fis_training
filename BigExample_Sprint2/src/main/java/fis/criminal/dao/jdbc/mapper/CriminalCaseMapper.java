@@ -1,7 +1,7 @@
 package fis.criminal.dao.jdbc.mapper;
 
 import fis.criminal.dao.jdbc.JDBCDetectiveDAO;
-import fis.criminal.dao.jdbc.utils;
+import fis.criminal.dao.jdbc.Utils;
 import fis.criminal.model.CriminalCase;
 
 import fis.criminal.model.Detective;
@@ -27,8 +27,8 @@ public class CriminalCaseMapper {
             criminalCase.setShortDescription(criminalCaseResultSet.getString("shortDescription"));
             criminalCase.setDetailedDescription(criminalCaseResultSet.getString("detailedDescription"));
             criminalCase.setNotes(criminalCaseResultSet.getString("note"));
-            criminalCase.setCreatedAt(utils.covertLocalDateTimeToDate(criminalCaseResultSet.getDate("createdAt")));
-            criminalCase.setModifiedAt(utils.covertLocalDateTimeToDate(criminalCaseResultSet.getDate("modifiedAt")));
+            criminalCase.setCreatedAt(Utils.covertLocalDateTimeToDate(criminalCaseResultSet.getDate("createdAt")));
+            criminalCase.setModifiedAt(Utils.covertLocalDateTimeToDate(criminalCaseResultSet.getDate("modifiedAt")));
             criminalCase.setType(CaseType.valueOf(criminalCaseResultSet.getString("type")));
             criminalCase.setStatus(CaseStatus.valueOf(criminalCaseResultSet.getString("status")));
             Optional<Detective> opt = jdbcDetectiveDAAO.get(criminalCaseResultSet.getLong("leadInvestigatorId"));

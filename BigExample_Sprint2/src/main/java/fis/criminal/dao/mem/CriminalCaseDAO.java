@@ -2,18 +2,16 @@ package fis.criminal.dao.mem;
 
 import fis.criminal.dao.ICriminalCaseDAO;
 import fis.criminal.model.CriminalCase;
-import fis.criminal.model.Detective;
 
 import java.util.List;
 import java.util.Optional;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 public class CriminalCaseDAO implements ICriminalCaseDAO {
+    private final static Logger logger = LoggerFactory.getLogger(CriminalCaseDAO.class);
     @Override
     public void save(CriminalCase criminalCase) {
-
-       MemoryDataSource.CRIMINAL_CASES.add(criminalCase);
-//        if(!MemoryDataSource.CRIMINAL_CASES.stream()
-//                .filter(item -> item.getId()))
+        MemoryDataSource.CRIMINAL_CASES.add(criminalCase);
     }
 
 
@@ -51,7 +49,8 @@ public class CriminalCaseDAO implements ICriminalCaseDAO {
     }
 
     @Override
-    public void delete(CriminalCase criminalCase) {
+    public CriminalCase delete(CriminalCase criminalCase) {
         MemoryDataSource.CRIMINAL_CASES.remove(criminalCase);
+        return criminalCase;
     }
 }

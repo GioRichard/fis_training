@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -64,7 +63,6 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
 
     @Override
     public List<Detective> getAll() {
-        List<Detective> detectives = new ArrayList<>();
         try(
             Connection con = DatabaseUtility.getConnection();
 
@@ -72,16 +70,16 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
             ResultSet rs = stmt.executeQuery ()) {
                 while (rs.next()) {
                     Detective detective = DetectiveMapper.get(rs);
-                    if(detective != null) detectives.add(detective);
+                    if(detective != null) MemoryDataSource.DETECTIVES.add(detective);
                 }
             }
         catch (SQLException ex){
             logger.error(ex.toString());
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            logger.error(e.toString());
         }
 
-        return detectives;
+        return MemoryDataSource.DETECTIVES;
     }
 
     @Override
@@ -115,7 +113,7 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
     }
 
     @Override
-    public void delete(Detective detective) {
+    public Detective delete(Detective detective) {
         try(Connection con = DatabaseUtility.getConnection()) {
             PreparedStatement stmt =
                     con.prepareStatement("DELETE FROM detective WHERE id = ?");
@@ -125,5 +123,6 @@ public class JDBCDetectiveDAO implements IDetectiveDAO {
         }catch (Exception ex) {
             logger.error(ex.toString());
         }
+        return detective;
     }
 }

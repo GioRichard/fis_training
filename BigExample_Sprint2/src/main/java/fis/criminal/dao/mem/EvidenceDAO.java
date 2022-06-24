@@ -1,7 +1,6 @@
 package fis.criminal.dao.mem;
 
 import fis.criminal.dao.IEvidenceDAO;
-import fis.criminal.model.Detective;
 import fis.criminal.model.Evidence;
 
 import java.util.List;
@@ -40,7 +39,8 @@ public class EvidenceDAO implements IEvidenceDAO {
     }
 
     @Override
-    public void delete(Evidence evidence) {
+    public Evidence delete(Evidence evidence) {
         MemoryDataSource.EVIDENCES.remove(evidence);
+        return null;
     }
 }

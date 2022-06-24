@@ -18,11 +18,6 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
     private final static Logger logger = LoggerFactory.getLogger(JDBCCriminalCaseDAO.class);
 
     @Override
-    public boolean delete(long id) {
-        return MemoryDataSource.CRIMINAL_CASES.remove(id);
-    }
-
-    @Override
     public void save(CriminalCase criminalCase) {
         try(Connection conn = DatabaseUtility.getConnection()){
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO criminalcase VALUES (?,?,?,?,?,?,?,?,?,?,?)");
@@ -42,7 +37,6 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
         catch (Exception e){
             logger.error(e.toString());
         }
-
     }
 
     @Override
@@ -76,10 +70,10 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
             while (rs.next()) {
                 CriminalCase criminalCase = CriminalCaseMapper.get(rs);
                 if(criminalCase != null) MemoryDataSource.CRIMINAL_CASES.add(criminalCase);
-            } // end of while
+            }
         } catch (SQLException e) {
             logger.error(e.toString());
-        } // end of try-with-resources
+        }
         catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -114,7 +108,7 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
     }
 
     @Override
-    public void delete(CriminalCase criminalCase) {
+    public CriminalCase delete(CriminalCase criminalCase) {
         try(Connection con = DatabaseUtility.getConnection()) {
             PreparedStatement stmt =
                     con.prepareStatement("DELETE FROM criminalcase WHERE id = ?");
@@ -124,6 +118,12 @@ public class JDBCCriminalCaseDAO implements ICriminalCaseDAO {
         }catch (Exception ex) {
             logger.error(ex.toString());
         }
+        return criminalCase;
+    }
 
+    @Override
+    public boolean delete(long id) {
+
+        return MemoryDataSource.CRIMINAL_CASES.remove(id);
     }
 }

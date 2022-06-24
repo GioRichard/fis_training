@@ -1,0 +1,40 @@
+2022-06-24 15:55:09 DEBUG HikariPool-1 - configuration:
+2022-06-24 15:55:09 DEBUG allowPoolSuspension.............false
+2022-06-24 15:55:09 DEBUG autoCommit......................true
+2022-06-24 15:55:09 DEBUG catalog.........................none
+2022-06-24 15:55:09 DEBUG connectionInitSql...............none
+2022-06-24 15:55:09 DEBUG connectionTestQuery.............none
+2022-06-24 15:55:09 DEBUG connectionTimeout...............30000
+2022-06-24 15:55:09 DEBUG dataSource......................none
+2022-06-24 15:55:09 DEBUG dataSourceClassName.............none
+2022-06-24 15:55:09 DEBUG dataSourceJNDI..................none
+2022-06-24 15:55:09 DEBUG dataSourceProperties............{password=<masked>, prepStmtCacheSqlLimit=2048, cachePrepStmts=true, user=root, prepStmtCacheSize=250}
+2022-06-24 15:55:09 DEBUG driverClassName.................none
+2022-06-24 15:55:09 DEBUG exceptionOverrideClassName......none
+2022-06-24 15:55:09 DEBUG healthCheckProperties...........{}
+2022-06-24 15:55:09 DEBUG healthCheckRegistry.............none
+2022-06-24 15:55:09 DEBUG idleTimeout.....................600000
+2022-06-24 15:55:09 DEBUG initializationFailTimeout.......1
+2022-06-24 15:55:09 DEBUG isolateInternalQueries..........false
+2022-06-24 15:55:09 DEBUG jdbcUrl.........................jdbc:mysql://localhost:3306/system_db
+2022-06-24 15:55:09 DEBUG leakDetectionThreshold..........0
+2022-06-24 15:55:09 DEBUG maxLifetime.....................1800000
+2022-06-24 15:55:09 DEBUG maximumPoolSize.................10
+2022-06-24 15:55:09 DEBUG metricRegistry..................none
+2022-06-24 15:55:09 DEBUG metricsTrackerFactory...........none
+2022-06-24 15:55:09 DEBUG minimumIdle.....................10
+2022-06-24 15:55:09 DEBUG password........................<masked>
+2022-06-24 15:55:09 DEBUG poolName........................"HikariPool-1"
+2022-06-24 15:55:09 DEBUG readOnly........................false
+2022-06-24 15:55:09 DEBUG registerMbeans..................false
+2022-06-24 15:55:09 DEBUG scheduledExecutor...............none
+2022-06-24 15:55:09 DEBUG schema..........................none
+2022-06-24 15:55:09 DEBUG threadFactory...................internal
+2022-06-24 15:55:09 DEBUG transactionIsolation............default
+2022-06-24 15:55:09 DEBUG username........................none
+2022-06-24 15:55:09 DEBUG validationTimeout...............5000
+2022-06-24 15:55:09 INFO  HikariPool-1 - Starting...
+2022-06-24 15:55:09 DEBUG Loaded driver with class name com.mysql.cj.jdbc.Driver for jdbcUrl=jdbc:mysql://localhost:3306/system_db
+2022-06-24 15:55:10 DEBUG HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70a36a66
+2022-06-24 15:55:10 INFO  HikariPool-1 - Start completed.
+2022-06-24 15:55:10 ERROR java.time.format.DateTimeParseException: Text 'T2T0T0T0T-T0T7T-T1T8T T1T2T-T0T0T-T0T0T' could not be parsed at index 0

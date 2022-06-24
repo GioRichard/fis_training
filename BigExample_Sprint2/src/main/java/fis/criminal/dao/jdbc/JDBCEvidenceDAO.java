@@ -84,7 +84,7 @@ public class JDBCEvidenceDAO implements IEvidenceDAO {
     }
 
     @Override
-    public void delete(Evidence evidence) {
+    public Evidence delete(Evidence evidence) {
         try(Connection con = DatabaseUtility.getConnection()) {
             PreparedStatement stmt =
                     con.prepareStatement("DELETE FROM evidence WHERE id = ?");
@@ -94,5 +94,6 @@ public class JDBCEvidenceDAO implements IEvidenceDAO {
         }catch (Exception ex) {
             logger.error(ex.toString());
         }
+        return evidence;
     }
 }
