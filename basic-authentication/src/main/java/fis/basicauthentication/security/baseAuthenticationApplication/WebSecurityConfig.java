@@ -1,4 +1,4 @@
-package fis.basicauthentication.security;
+package fis.basicauthentication.security.baseAuthenticationApplication;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

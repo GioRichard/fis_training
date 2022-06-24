@@ -19,11 +19,11 @@ public class TrackEntry extends AbstractEntity{
     @ManyToOne
     @JoinColumn(name = "detectiveId")
     Detective detective;
+    @Enumerated(EnumType.STRING)
     TrackAction action;
     String reason;
 
-    public TrackEntry() {
-    }
+
 
     public LocalDateTime getDate() {
         return date;

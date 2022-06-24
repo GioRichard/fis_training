@@ -10,7 +10,7 @@ public interface DetectiveService {
     Detective CreateDetective(Detective detective);
     Detective updateDetective(Detective detective);
     Detective deleteDetectiveById(Long id);
-    List<Detective> fillAll();
+    List<Detective> getAll();
 
     Optional<Detective> findById(Long id);
 }

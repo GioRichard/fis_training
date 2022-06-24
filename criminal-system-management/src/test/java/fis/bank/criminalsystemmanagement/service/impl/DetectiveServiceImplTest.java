@@ -1,5 +1,6 @@
 package fis.bank.criminalsystemmanagement.service.impl;
 
+import fis.bank.criminalsystemmanagement.repository.DetectiveRepository;
 import fis.bank.criminalsystemmanagement.service.DetectiveService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class DetectiveServiceImplTest {
-
     @Autowired
     private DetectiveService detectiveService;
+
     @Test
     void createDetective() {
     }
@@ -20,8 +21,8 @@ class DetectiveServiceImplTest {
     }
 
     @Test
-    void fillAll() {
-        detectiveService.fillAll();
+    void getAll() {
+        detectiveService.getAll().forEach(System.out::println);
     }
 
     @Test

@@ -1,5 +1,6 @@
 package fis.bank.criminalsystemmanagement.service.impl;
 
+import fis.bank.criminalsystemmanagement.model.enums.CaseStatus;
 import fis.bank.criminalsystemmanagement.repository.CriminalCaseRepository;
 import fis.bank.criminalsystemmanagement.service.CriminalCaseService;
 import fis.bank.criminalsystemmanagement.model.CriminalCase;
@@ -21,8 +22,10 @@ class CriminalCaseServiceImplTest {
 
     @Test
     void createCriminalCase() {
-        CriminalCase criminalCase = new CriminalCase(6L,1,null,null,"1234",
-                "dai", "ngan",null,"note1",null,null);
+        CriminalCase criminalCase = new CriminalCase();
+//        criminalCase.setNumber("1232");
+//        criminalCase.setStatus(CaseStatus.CLOSED);
+//        criminalCase.setVersion(6);
 
         criminalCaseService.CreateCriminalCase(criminalCase);
     }

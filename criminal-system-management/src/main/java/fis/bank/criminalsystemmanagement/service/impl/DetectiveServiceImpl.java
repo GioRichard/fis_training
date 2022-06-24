@@ -34,9 +34,10 @@ public class DetectiveServiceImpl implements DetectiveService {
     }
 
     @Override
-    public List<Detective> fillAll() {
+    public List<Detective> getAll() {
         return detectiveRepository.findAll();
     }
+
 
     @Override
     public Optional<Detective> findById(Long id) {

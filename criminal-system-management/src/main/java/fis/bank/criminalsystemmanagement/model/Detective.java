@@ -14,8 +14,10 @@ import java.util.Set;
 public class Detective extends AbstractEntity{
     String badgeNumber;
     @Column(name = "`rank`")
+    @Enumerated(EnumType.STRING)
     Rank rank;
     Boolean armed;
+    @Enumerated(EnumType.STRING)
     EmploymentStatus status;
     @ManyToMany
     @JoinTable(
@@ -35,9 +37,6 @@ public class Detective extends AbstractEntity{
     String lastName;
     String password;
     LocalDateTime hiringDate;
-    public Detective() {
-    }
-
     public String getUsername() {
         return username;
     }
@@ -157,17 +156,4 @@ public class Detective extends AbstractEntity{
                 '}';
     }
 
-    public void replaceWith(Detective detective){
-        this.armed = detective.getArmed();
-        this.badgeNumber = detective.getBadgeNumber();
-        this.status = detective.getStatus();
-        this.criminalCases = detective.getCriminalCases();
-        this.firstName = detective.getFirstName();
-        this.hiringDate = detective.getHiringDate();
-        this.lastName = detective.getLastName();
-        this.username = detective.getUsername();
-        this.lastName = detective.getLastName();
-        this.trackEntries = detective.getTrackEntries();
-        this.rank = detective.getRank();
-    }
 }

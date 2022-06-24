@@ -5,10 +5,10 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
-@Data
 @Entity
 @Table(name = "evidence")
 public class Evidence extends  AbstractEntity{
+
     @OneToOne(cascade = CascadeType.ALL)
             @JoinColumn(name = "storageId")
     Storage storage;
@@ -24,8 +24,7 @@ public class Evidence extends  AbstractEntity{
     @JoinColumn(name = "criminalCaseId")
     CriminalCase criminalCase;
 
-    public Evidence() {
-    }
+
     public CriminalCase getCriminalCase() {
         return criminalCase;
     }
@@ -107,13 +106,5 @@ public class Evidence extends  AbstractEntity{
                 ", trackEntries=" + trackEntries +
                 '}';
     }
-    public void replaceWith(Evidence evidence){
-        this.criminalCase = evidence.getCriminalCase();
-        this.storage = evidence.getStorage();
-        this.number = evidence.getNumber();
-        this.itemName = evidence.getItemName();
-        this.notes = evidence.getNotes();
-        this.archived = evidence.getArchived();
-        this.trackEntries = evidence.getTrackEntries();
-    }
+
 }

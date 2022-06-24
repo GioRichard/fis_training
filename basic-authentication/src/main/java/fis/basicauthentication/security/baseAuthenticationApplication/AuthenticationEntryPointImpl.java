@@ -1,4 +1,4 @@
-package fis.basicauthentication.security;
+package fis.basicauthentication.security.baseAuthenticationApplication;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint;
