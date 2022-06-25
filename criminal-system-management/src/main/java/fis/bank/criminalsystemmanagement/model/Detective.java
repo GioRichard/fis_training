@@ -2,81 +2,42 @@ package fis.bank.criminalsystemmanagement.model;
 
 import fis.bank.criminalsystemmanagement.model.enums.EmploymentStatus;
 import fis.bank.criminalsystemmanagement.model.enums.Rank;
-import lombok.Data;
+
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "detective")
+@Table(name = "detectives")
 public class Detective extends AbstractEntity{
-    String badgeNumber;
+    @OneToOne
+    @JoinColumn(name = "person_id")
+    private Person person;
+    @Column(name = "badge_number", unique = true)
+    private String badgeNumber;
     @Column(name = "`rank`")
     @Enumerated(EnumType.STRING)
-    Rank rank;
-    Boolean armed;
+    private Rank rank;
+    @Column(name = "armed")
+    private boolean armed;
     @Enumerated(EnumType.STRING)
-    EmploymentStatus status;
-    @ManyToMany
-    @JoinTable(
-            name = "working_detective_case",
-            joinColumns = @JoinColumn(name = "detectiveId"),
-            inverseJoinColumns = @JoinColumn(name = "criminalCaseId"))
-    Set<CriminalCase> criminalCases;
+    private EmploymentStatus employmentStatus;
+    @ManyToMany(mappedBy = "assigned")
+    @Transient
+    private Set<CriminalCase> criminalCaseSet;
+    @OneToMany(mappedBy = "detective")
+    @Transient
+    private Set<TrackEntry> trackEntrySet;
 
-    @OneToMany(mappedBy = "detective", cascade = CascadeType.ALL)
-    Set<TrackEntry> trackEntries;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "leadInvestigator")
-      CriminalCase criminalCase;
-    String username;
-    String firstName;
-    String lastName;
-    String password;
-    LocalDateTime hiringDate;
-    public String getUsername() {
-        return username;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setPerson(Person person) {
+        this.person = person;
     }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public LocalDateTime getHiringDate() {
-        return hiringDate;
-    }
-
-    public void setHiringDate(LocalDateTime hiringDate) {
-        this.hiringDate = hiringDate;
-    }
-
 
     public String getBadgeNumber() {
         return badgeNumber;
@@ -94,66 +55,66 @@ public class Detective extends AbstractEntity{
         this.rank = rank;
     }
 
-    public Boolean getArmed() {
+    public boolean getArmed() {
         return armed;
     }
 
-    public void setArmed(Boolean armed) {
+    public void setArmed(boolean armed) {
         this.armed = armed;
     }
 
-    public EmploymentStatus getStatus() {
-        return status;
+    public EmploymentStatus getEmploymentStatus() {
+        return employmentStatus;
     }
 
-    public void setStatus(EmploymentStatus status) {
-        this.status = status;
+    public void setEmploymentStatus(EmploymentStatus employmentStatus) {
+        this.employmentStatus = employmentStatus;
     }
 
-    public Set<CriminalCase> getCriminalCases() {
-        return criminalCases;
+    public Set<CriminalCase> getCriminalCaseSet() {
+        return criminalCaseSet;
     }
 
-    public void setCriminalCases(Set<CriminalCase> criminalCases) {
-        this.criminalCases = criminalCases;
+    public void setCriminalCaseSet(Set<CriminalCase> criminalCaseSet) {
+        this.criminalCaseSet = criminalCaseSet;
     }
 
-    public Set<TrackEntry> getTrackEntries() {
-        return trackEntries;
+    public Set<TrackEntry> getTrackEntrySet() {
+        return trackEntrySet;
     }
 
-    public void setTrackEntries(Set<TrackEntry> trackEntries) {
-        this.trackEntries = trackEntries;
+    public void setTrackEntrySet(Set<TrackEntry> trackEntrySet) {
+        this.trackEntrySet = trackEntrySet;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Detective)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Detective detective = (Detective) o;
-        return Objects.equals(badgeNumber, detective.badgeNumber) && rank == detective.rank && Objects.equals(armed, detective.armed) && status == detective.status && Objects.equals(criminalCases, detective.criminalCases) && Objects.equals(trackEntries, detective.trackEntries) && Objects.equals(username, detective.username) && Objects.equals(firstName, detective.firstName) && Objects.equals(lastName, detective.lastName) && Objects.equals(password, detective.password) && Objects.equals(hiringDate, detective.hiringDate);
+        return armed == detective.armed
+                && Objects.equals(person, detective.person)
+                && Objects.equals(badgeNumber, detective.badgeNumber)
+                && rank == detective.rank
+                && employmentStatus == detective.employmentStatus
+                && Objects.equals(criminalCaseSet, detective.criminalCaseSet)
+                && Objects.equals(trackEntrySet, detective.trackEntrySet);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(badgeNumber, rank, armed, status, criminalCases, trackEntries, username, firstName, lastName, password, hiringDate);
+        return Objects.hash(person, badgeNumber, rank, armed, employmentStatus, criminalCaseSet, trackEntrySet);
     }
-
     @Override
     public String toString() {
         return "Detective{" +
-                "badgeNumber='" + badgeNumber + '\'' +
+                "person=" + person +
+                ", badgeNumber='" + badgeNumber + '\'' +
                 ", rank=" + rank +
                 ", armed=" + armed +
-                ", status=" + status +
-                ", criminalCases=" + criminalCases +
-                ", trackEntries=" + trackEntries +
-                ", username='" + username + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", password='" + password + '\'' +
-                ", hiringDate=" + hiringDate +
+                ", employmentStatus=" + employmentStatus +
+                ", criminalCaseSet=" + criminalCaseSet +
+                ", trackEntrySet=" + trackEntrySet +
                 '}';
     }
-
 }

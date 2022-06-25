@@ -4,43 +4,38 @@ import fis.bank.criminalsystemmanagement.repository.DetectiveRepository;
 import fis.bank.criminalsystemmanagement.service.DetectiveService;
 import fis.bank.criminalsystemmanagement.model.Detective;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class DetectiveServiceImpl implements DetectiveService {
     @Autowired
-    private DetectiveRepository detectiveRepository;
+    @Qualifier("ExtraDetectiveRepositoryImpl")
+    private DetectiveRepository detectiveRepo;
     @Override
-    public Detective CreateDetective(Detective detective) {
-        return detectiveRepository.save(detective);
+    public void create(Detective detective) {
+        detectiveRepo.create(detective);
     }
 
     @Override
-    public Detective updateDetective(Detective detective) {
-        return detectiveRepository.save(detective);
+    public Set<Detective> getALl() {
+        return detectiveRepo.getALl();
     }
 
     @Override
-    public Detective deleteDetectiveById(Long id) {
-        Optional<Detective> opt = detectiveRepository.findById(id);
-        if(opt.isPresent())
-            detectiveRepository.deleteById(id);
-        else
-            throw new IllegalArgumentException(String.format("ID khong ton tai: %s",id));
-        return null;
+    public Detective findById(Long id) {
+        return detectiveRepo.findById(id);
     }
 
     @Override
-    public List<Detective> getAll() {
-        return detectiveRepository.findAll();
+    public Detective update(Detective detective) {
+        return detectiveRepo.update(detective);
     }
 
-
     @Override
-    public Optional<Detective> findById(Long id) {
-        return detectiveRepository.findById(id);
+    public void deleteById(Long id) {
+        detectiveRepo.deleteById(id);
     }
 }

@@ -1,9 +1,9 @@
 package fis.bank.criminalsystemmanagement.repository;
 
-import fis.bank.criminalsystemmanagement.model.Detective;
+import fis.bank.criminalsystemmanagement.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-public interface DetectiveRepository extends AbstractRepoRepository<Detective> {
-
+@Repository
+public interface PersonRepository extends JpaRepository<Person, Long> {
 }

@@ -6,44 +6,36 @@ import fis.bank.criminalsystemmanagement.model.enums.CaseType;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "criminalcase")
+@Table(name = "criminal_case")
 public class CriminalCase  extends  AbstractEntity{
-    String number;
+    @Column(name = "number", unique = true)
+    private String number;
+    @Column(name = "case_type")
     @Enumerated(EnumType.STRING)
-    CaseType type;
-    String shortDescription;
-    String detailedDescription;
+    private CaseType caseType;
+    @Column(name = "short_description")
+    private String shortDescription;
+    @Column(name = "detail_description")
+    private String detailedDescription;
+    @Column(name = "case_status")
     @Enumerated(EnumType.STRING)
-    CaseStatus status;
-    String notes;
-    @ManyToMany(mappedBy = "criminalCases")
-    Set<Detective> detectives;
-
+    private CaseStatus caseStatus;
+    @Column(name = "notes")
+    private String notes;
+    @OneToMany(mappedBy = "criminalCase")
+    @Transient
+    private Set<Evidence> evidenceSet;
     @OneToOne
-    @JoinColumn(name = "criminalCase")
-    Detective leadInvestigator;
-
-    @OneToMany(mappedBy = "criminalCase", cascade = CascadeType.ALL)
-    Set<Evidence> evidences;
-
-    public Set<Detective> getDetectives() {
-        return detectives;
-    }
-
-    public void setDetectives(Set<Detective> detectives) {
-        this.detectives = detectives;
-    }
-
-    public Set<Evidence> getEvidences() {
-        return evidences;
-    }
-
-    public void setEvidences(Set<Evidence> evidences) {
-        this.evidences = evidences;
-    }
+    @JoinColumn(name="lead_detective_id", nullable = false)
+    private Detective leadInvestigator;
+    @ManyToMany
+    @JoinTable(name = "case_detective")
+    @Transient
+    private Set<Detective> assigned;
 
     public String getNumber() {
         return number;
@@ -53,12 +45,12 @@ public class CriminalCase  extends  AbstractEntity{
         this.number = number;
     }
 
-    public CaseType getType() {
-        return type;
+    public CaseType getCaseType() {
+        return caseType;
     }
 
-    public void setType(CaseType type) {
-        this.type = type;
+    public void setCaseType(CaseType caseType) {
+        this.caseType = caseType;
     }
 
     public String getShortDescription() {
@@ -77,12 +69,12 @@ public class CriminalCase  extends  AbstractEntity{
         this.detailedDescription = detailedDescription;
     }
 
-    public CaseStatus getStatus() {
-        return status;
+    public CaseStatus getCaseStatus() {
+        return caseStatus;
     }
 
-    public void setStatus(CaseStatus status) {
-        this.status = status;
+    public void setCaseStatus(CaseStatus caseStatus) {
+        this.caseStatus = caseStatus;
     }
 
     public String getNotes() {
@@ -94,11 +86,11 @@ public class CriminalCase  extends  AbstractEntity{
     }
 
     public Set<Evidence> getEvidenceSet() {
-        return evidences;
+        return evidenceSet;
     }
 
     public void setEvidenceSet(Set<Evidence> evidenceSet) {
-        this.evidences = evidenceSet;
+        this.evidenceSet = evidenceSet;
     }
 
     public Detective getLeadInvestigator() {
@@ -110,60 +102,45 @@ public class CriminalCase  extends  AbstractEntity{
     }
 
     public Set<Detective> getAssigned() {
-        return detectives;
+        return assigned;
     }
 
     public void setAssigned(Set<Detective> assigned) {
-        this.detectives = assigned;
+        this.assigned = assigned;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (!(o instanceof CriminalCase)) return false;
+        if (!super.equals(o)) return false;
         CriminalCase that = (CriminalCase) o;
-
-        if (number != null ? !number.equals(that.number) : that.number != null) return false;
-        if (type != that.type) return false;
-        if (shortDescription != null ? !shortDescription.equals(that.shortDescription) : that.shortDescription != null)
-            return false;
-        if (detailedDescription != null ? !detailedDescription.equals(that.detailedDescription) : that.detailedDescription != null)
-            return false;
-        if (status != that.status) return false;
-        if (notes != null ? !notes.equals(that.notes) : that.notes != null) return false;
-        if (evidences != null ? !evidences.equals(that.evidences) : that.evidences != null) return false;
-        if (leadInvestigator != null ? !leadInvestigator.equals(that.leadInvestigator) : that.leadInvestigator != null)
-            return false;
-        return detectives != null ? detectives.equals(that.detectives) : that.detectives == null;
+        return Objects.equals(number, that.number) && caseType ==
+                that.caseType && Objects.equals(shortDescription, that.shortDescription)
+                && Objects.equals(detailedDescription, that.detailedDescription)
+                && caseStatus == that.caseStatus && Objects.equals(notes, that.notes)
+                && Objects.equals(evidenceSet, that.evidenceSet)
+                && Objects.equals(leadInvestigator, that.leadInvestigator) && Objects.equals(assigned, that.assigned);
     }
 
     @Override
     public int hashCode() {
-        int result = number != null ? number.hashCode() : 0;
-        result = 31 * result + (type != null ? type.hashCode() : 0);
-        result = 31 * result + (shortDescription != null ? shortDescription.hashCode() : 0);
-        result = 31 * result + (detailedDescription != null ? detailedDescription.hashCode() : 0);
-        result = 31 * result + (status != null ? status.hashCode() : 0);
-        result = 31 * result + (notes != null ? notes.hashCode() : 0);
-        result = 31 * result + (evidences != null ? evidences.hashCode() : 0);
-        result = 31 * result + (leadInvestigator != null ? leadInvestigator.hashCode() : 0);
-        result = 31 * result + (detectives != null ? detectives.hashCode() : 0);
-        return result;
+        return Objects.hash(super.hashCode(), number, caseType, shortDescription, detailedDescription,
+                caseStatus, notes, evidenceSet, leadInvestigator, assigned);
     }
 
     @Override
     public String toString() {
         return "CriminalCase{" +
                 "number='" + number + '\'' +
-                ", type=" + type +
+                ", caseType=" + caseType +
                 ", shortDescription='" + shortDescription + '\'' +
                 ", detailedDescription='" + detailedDescription + '\'' +
-                ", status=" + status +
+                ", caseStatus=" + caseStatus +
                 ", notes='" + notes + '\'' +
-                ", evidenceSet=" + evidences +
+                ", evidenceSet=" + evidenceSet +
                 ", leadInvestigator=" + leadInvestigator +
-                ", assigned=" + detectives +
+                ", assigned=" + assigned +
                 '}';
     }
 }

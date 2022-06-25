@@ -8,41 +8,34 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class StorageServiceImpl implements StorageService {
 
-    @Autowired
-    private StorageRepository storageRepository;
 
     @Override
-    public Storage CreateStorage(Storage storage) {
-        storageRepository.save(storage);
-        return storage;
+    public void create(Storage storage) {
+
     }
 
     @Override
-    public Storage updateStorage(Storage storage) {
-        return storageRepository.save(storage);
-    }
-
-    @Override
-    public Storage deleteStorageById(Long id) {
-        Optional<Storage> opt = storageRepository.findById(id);
-        if(opt.isPresent())
-            storageRepository.deleteById(id);
-        else
-            throw new IllegalArgumentException(String.format("ID khong ton tai: %s",id));
+    public Set<Storage> getALl() {
         return null;
     }
 
     @Override
-    public List<Storage> fillAll() {
-        return storageRepository.findAll();
+    public Storage findById(Long id) {
+        return null;
     }
 
     @Override
-    public Optional<Storage> findById(Long id) {
-        return storageRepository.findById(id);
+    public Storage update(Storage storage) {
+        return null;
+    }
+
+    @Override
+    public void deleteById(Long id) {
+
     }
 }

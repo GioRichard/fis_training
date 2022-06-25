@@ -6,11 +6,12 @@ import fis.bank.criminalsystemmanagement.model.Storage;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface StorageService {
-    Storage CreateStorage(Storage storage);
-    Storage updateStorage(Storage storage);
-    Storage deleteStorageById(Long id);
-    List<Storage> fillAll();
-    Optional<Storage> findById(Long id);
+    void create(Storage storage);
+    Set<Storage> getALl();
+    Storage findById(Long id);
+    Storage update(Storage storage);
+    void deleteById(Long id);
 }

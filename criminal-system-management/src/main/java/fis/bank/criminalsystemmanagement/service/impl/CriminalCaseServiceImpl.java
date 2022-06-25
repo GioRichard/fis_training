@@ -14,32 +14,27 @@ public class CriminalCaseServiceImpl implements CriminalCaseService {
     @Autowired
     private CriminalCaseRepository criminalCaseRepository;
     @Override
-    public CriminalCase CreateCriminalCase(CriminalCase criminalCase) {
-        return criminalCaseRepository.save(criminalCase);
+    public void create(CriminalCase criminalCase) {
+        criminalCaseRepository.save(criminalCase);
     }
 
     @Override
-    public CriminalCase updateCriminalCase(CriminalCase criminalCase) {
-        return criminalCaseRepository.save(criminalCase);
-    }
-
-    @Override
-    public CriminalCase deleteCriminalCaseById(Long id) {
-        Optional<CriminalCase> opt = criminalCaseRepository.findById(id);
-        if(opt.isPresent())
-            criminalCaseRepository.deleteById(id);
-        else
-            throw new IllegalArgumentException(String.format("ID khong ton tai: %s",id));
-        return null;
-    }
-
-    @Override
-    public List<CriminalCase> fillAll() {
+    public List<CriminalCase> getAll() {
         return criminalCaseRepository.findAll();
     }
 
     @Override
-    public Optional<CriminalCase> findById(Long id) {
-        return criminalCaseRepository.findById(id);
+    public CriminalCase update(CriminalCase criminalCase) {
+        return criminalCaseRepository.save(criminalCase);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        criminalCaseRepository.deleteById(id);
+    }
+
+    @Override
+    public CriminalCase findById(Long id) {
+        return criminalCaseRepository.findById(id).orElse(null);
     }
 }

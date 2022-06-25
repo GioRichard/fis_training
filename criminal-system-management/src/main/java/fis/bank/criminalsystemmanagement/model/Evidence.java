@@ -1,29 +1,29 @@
 package fis.bank.criminalsystemmanagement.model;
 
-import lombok.Data;
+
 
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
 @Entity
-@Table(name = "evidence")
+@Table(name = "evidences")
 public class Evidence extends  AbstractEntity{
-
-    @OneToOne(cascade = CascadeType.ALL)
-            @JoinColumn(name = "storageId")
-    Storage storage;
-    String number;
-    String itemName;
-    String notes;
-    Boolean archived;
-
-    @OneToMany(mappedBy = "evidence", cascade = CascadeType.ALL)
-    Set<TrackEntry> trackEntries;
-
     @ManyToOne
-    @JoinColumn(name = "criminalCaseId")
-    CriminalCase criminalCase;
-
+    @JoinColumn(name="case_id", nullable = false)
+    private CriminalCase criminalCase;
+    @ManyToOne
+    @JoinColumn(name = "storage_id", nullable = false)
+    private Storage storage;
+    @Column(name = "number", unique = true)
+    private String number;
+    @Column(name = "item")
+    private String itemName;
+    @Column(name = "notes")
+    private String notes;
+    @Column(name = "archived")
+    private boolean archived;
+    @OneToMany(mappedBy = "evidence")
+    private Set<TrackEntry> trackEntrySet;
 
     public CriminalCase getCriminalCase() {
         return criminalCase;
@@ -65,33 +65,37 @@ public class Evidence extends  AbstractEntity{
         this.notes = notes;
     }
 
-    public Boolean getArchived() {
+    public boolean isArchived() {
         return archived;
     }
 
-    public void setArchived(Boolean archived) {
+    public void setArchived(boolean archived) {
         this.archived = archived;
     }
 
-    public Set<TrackEntry> getTrackEntries() {
-        return trackEntries;
+    public Set<TrackEntry> getTrackEntrySet() {
+        return trackEntrySet;
     }
 
-    public void setTrackEntries(Set<TrackEntry> trackEntries) {
-        this.trackEntries = trackEntries;
+    public void setTrackEntrySet(Set<TrackEntry> trackEntrySet) {
+        this.trackEntrySet = trackEntrySet;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Evidence)) return false;
+        if (!super.equals(o)) return false;
         Evidence evidence = (Evidence) o;
-        return Objects.equals(criminalCase, evidence.criminalCase) && Objects.equals(storage, evidence.storage) && Objects.equals(number, evidence.number) && Objects.equals(itemName, evidence.itemName) && Objects.equals(notes, evidence.notes) && Objects.equals(archived, evidence.archived) && Objects.equals(trackEntries, evidence.trackEntries);
+        return archived == evidence.archived && Objects.equals(criminalCase, evidence.criminalCase)
+                && Objects.equals(storage, evidence.storage) && Objects.equals(number, evidence.number)
+                && Objects.equals(itemName, evidence.itemName) && Objects.equals(notes, evidence.notes)
+                && Objects.equals(trackEntrySet, evidence.trackEntrySet);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(criminalCase, storage, number, itemName, notes, archived, trackEntries);
+        return Objects.hash(super.hashCode(), criminalCase, storage, number, itemName, notes, archived, trackEntrySet);
     }
 
     @Override
@@ -103,8 +107,7 @@ public class Evidence extends  AbstractEntity{
                 ", itemName='" + itemName + '\'' +
                 ", notes='" + notes + '\'' +
                 ", archived=" + archived +
-                ", trackEntries=" + trackEntries +
+                ", trackEntrySet=" + trackEntrySet +
                 '}';
     }
-
 }

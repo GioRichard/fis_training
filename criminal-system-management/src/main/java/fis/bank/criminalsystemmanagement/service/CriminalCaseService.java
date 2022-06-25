@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CriminalCaseService {
-    CriminalCase CreateCriminalCase(CriminalCase criminalCase);
-    CriminalCase updateCriminalCase(CriminalCase criminalCase);
-    CriminalCase deleteCriminalCaseById(Long id);
-    List<CriminalCase> fillAll();
+    void create(CriminalCase criminalCase);
+    List<CriminalCase> getAll();
+    CriminalCase update(CriminalCase criminalCase);
+    void deleteById(Long id);
 
-    Optional<CriminalCase> findById(Long id);
+    CriminalCase findById(Long id);
 }

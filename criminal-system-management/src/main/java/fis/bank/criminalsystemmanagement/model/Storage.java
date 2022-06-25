@@ -1,22 +1,20 @@
 package fis.bank.criminalsystemmanagement.model;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Objects;
+import java.util.Set;
 
 
 @Entity
-@Table(name = "storage")
+@Table(name = "storages")
 public class Storage extends AbstractEntity{
-    String name;
-    String location;
-
-    @OneToOne(mappedBy = "storage")
-    private Evidence evidence;
-
-    public Storage(long l, String s) {
-    }
+    @Column(name = "name")
+    private String name;
+    @Column(name = "location")
+    private String location;
+    @OneToMany(mappedBy = "storage")
+    private Set<Evidence> evidenceSet;
 
     public String getName() {
         return name;
@@ -34,16 +32,35 @@ public class Storage extends AbstractEntity{
         this.location = location;
     }
 
-    public Evidence getEvidence() {
-        return evidence;
+    public Set<Evidence> getEvidenceSet() {
+        return evidenceSet;
     }
 
-    public void setEvidence(Evidence evidence) {
-        this.evidence = evidence;
+    public void setEvidenceSet(Set<Evidence> evidenceSet) {
+        this.evidenceSet = evidenceSet;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Storage)) return false;
+        if (!super.equals(o)) return false;
+        Storage storage = (Storage) o;
+        return Objects.equals(name, storage.name) && Objects.equals(location, storage.location)
+                && Objects.equals(evidenceSet, storage.evidenceSet);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), name, location, evidenceSet);
+    }
 
-
-
+    @Override
+    public String toString() {
+        return "Storage{" +
+                "name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", evidenceSet=" + evidenceSet +
+                '}';
+    }
 }

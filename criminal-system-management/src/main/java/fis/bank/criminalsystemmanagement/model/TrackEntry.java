@@ -1,29 +1,31 @@
 package fis.bank.criminalsystemmanagement.model;
 
 import fis.bank.criminalsystemmanagement.model.enums.TrackAction;
-import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Entity
-@Table(name = "trackentry")
+@Table(name = "track_entries")
 public class TrackEntry extends AbstractEntity{
-    @Column(name = "trackDate")
-    LocalDateTime date;
-
+    @Column
+    private LocalDateTime date;
     @ManyToOne
-    @JoinColumn(name = "evidenceId")
-    Evidence evidence;
-
+    @JoinColumn(name = "evidence_id", nullable = false)
+    private Evidence evidence;
     @ManyToOne
-    @JoinColumn(name = "detectiveId")
-    Detective detective;
+    @JoinColumn(name = "detective_id", nullable = false)
+    private Detective detective;
     @Enumerated(EnumType.STRING)
-    TrackAction action;
-    String reason;
+    private TrackAction trackAction;
+    @Column(name = "reason")
+    private String reason;
 
-
+    public TrackEntry() {
+        super();
+        date = LocalDateTime.now();
+    }
 
     public LocalDateTime getDate() {
         return date;
@@ -49,12 +51,12 @@ public class TrackEntry extends AbstractEntity{
         this.detective = detective;
     }
 
-    public TrackAction getAction() {
-        return action;
+    public TrackAction getTrackAction() {
+        return trackAction;
     }
 
-    public void setAction(TrackAction action) {
-        this.action = action;
+    public void setTrackAction(TrackAction trackAction) {
+        this.trackAction = trackAction;
     }
 
     public String getReason() {
@@ -63,5 +65,32 @@ public class TrackEntry extends AbstractEntity{
 
     public void setReason(String reason) {
         this.reason = reason;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TrackEntry)) return false;
+        if (!super.equals(o)) return false;
+        TrackEntry that = (TrackEntry) o;
+        return Objects.equals(date, that.date) && Objects.equals(evidence, that.evidence)
+                && Objects.equals(detective, that.detective) && trackAction == that.trackAction
+                && Objects.equals(reason, that.reason);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), date, evidence, detective, trackAction, reason);
+    }
+
+    @Override
+    public String toString() {
+        return "TrackEntry{" +
+                "date=" + date +
+                ", evidence=" + evidence +
+                ", detective=" + detective +
+                ", trackAction=" + trackAction +
+                ", reason='" + reason + '\'' +
+                '}';
     }
 }

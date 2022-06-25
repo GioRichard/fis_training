@@ -6,12 +6,12 @@ import fis.bank.criminalsystemmanagement.model.Evidence;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface EvidenceService {
-    Evidence CreateEvidence(Evidence evidence);
-    Evidence updateEvidence(Evidence evidence);
-    Evidence deleteEvidenceById(Long id);
-    List<Evidence> fillAll();
-
-    Optional<Evidence> findById(Long id);
+    void create(Evidence evidence);
+    Set<Evidence> getALl();
+    Evidence findById(Long id);
+    Evidence update(Evidence evidence);
+    void deleteById(Long id);
 }

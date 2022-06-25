@@ -8,39 +8,36 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class EvidenceServiceImpl implements EvidenceService {
 
     @Autowired
     private EvidenceRepository evidenceRepository;
+
     @Override
-    public Evidence CreateEvidence(Evidence evidence) {
-        return evidenceRepository.save(evidence);
+    public void create(Evidence evidence) {
+        evidenceRepository.save(evidence);
     }
 
     @Override
-    public Evidence updateEvidence(Evidence evidence) {
-        return evidenceRepository.save(evidence);
+    public Set<Evidence> getALl() {
+        return (Set<Evidence>) evidenceRepository.findAll();
     }
 
     @Override
-    public Evidence deleteEvidenceById(Long id) {
-        Optional<Evidence> opt = evidenceRepository.findById(id);
-        if(opt.isPresent())
-            evidenceRepository.deleteById(id);
-        else
-            throw new IllegalArgumentException(String.format("ID khong ton tai: %s",id));
+    public Evidence findById(Long id) {
         return null;
     }
 
     @Override
-    public List<Evidence> fillAll() {
-        return evidenceRepository.findAll();
+    public Evidence update(Evidence evidence) {
+        return null;
     }
 
     @Override
-    public Optional<Evidence> findById(Long id) {
-        return evidenceRepository.findById(id);
+    public void deleteById(Long id) {
+
     }
 }
