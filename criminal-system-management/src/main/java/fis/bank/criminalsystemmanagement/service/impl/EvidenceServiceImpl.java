@@ -6,10 +6,9 @@ import fis.bank.criminalsystemmanagement.model.Evidence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
+@SuppressWarnings("unchecked")
 @Service
 public class EvidenceServiceImpl implements EvidenceService {
 

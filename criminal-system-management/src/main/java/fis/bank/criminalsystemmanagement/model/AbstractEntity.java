@@ -4,8 +4,6 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-import static javax.persistence.InheritanceType.SINGLE_TABLE;
-
 @MappedSuperclass
 public class AbstractEntity {
     @Id

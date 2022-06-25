@@ -4,8 +4,6 @@ package fis.bank.criminalsystemmanagement.service;
 
 import fis.bank.criminalsystemmanagement.model.Storage;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 public interface StorageService {
