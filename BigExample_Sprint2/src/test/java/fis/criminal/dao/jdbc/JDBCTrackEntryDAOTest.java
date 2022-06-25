@@ -1,8 +1,6 @@
 package fis.criminal.dao.jdbc;
 
-import fis.criminal.dao.IStorageDAO;
 import fis.criminal.dao.ITrackEntryDAO;
-import fis.criminal.model.Storage;
 import fis.criminal.model.TrackEntry;
 import org.junit.jupiter.api.Test;
 

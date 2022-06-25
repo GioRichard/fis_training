@@ -1,12 +1,7 @@
 package fis.criminal.dao.jdbc;
 
-import fis.criminal.dao.ICriminalCaseDAO;
 import fis.criminal.dao.IDetectiveDAO;
-import fis.criminal.dao.mem.MemoryDataSource;
-import fis.criminal.model.CriminalCase;
 import fis.criminal.model.Detective;
-import fis.criminal.model.enums.CaseStatus;
-import fis.criminal.model.enums.CaseType;
 import fis.criminal.model.enums.EmploymentStatus;
 import fis.criminal.model.enums.Rank;
 import org.junit.jupiter.api.Test;
@@ -14,8 +9,6 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class JDBCDetectiveDAOTest {
 

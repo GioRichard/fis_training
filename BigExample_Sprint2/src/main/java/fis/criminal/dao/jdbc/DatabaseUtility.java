@@ -6,7 +6,6 @@ import com.zaxxer.hikari.HikariDataSource;
 
 import java.beans.PropertyVetoException;
 import java.sql.Connection;
-import java.sql.SQLException;
 
 public class DatabaseUtility {
     public final static String URL = "jdbc:mysql://localhost:3306/system_db";
@@ -33,8 +32,7 @@ public class DatabaseUtility {
 
     //No CP
     public static Connection getConnection() throws Exception {
-        Connection con = ds.getConnection();
-        return con;
+        return ds.getConnection();
     }
 
 
@@ -45,6 +43,4 @@ public class DatabaseUtility {
     static {
         ds = new HikariDataSource( config );
     }
-
-
 }

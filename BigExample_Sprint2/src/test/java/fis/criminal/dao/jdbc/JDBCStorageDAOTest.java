@@ -1,10 +1,7 @@
 package fis.criminal.dao.jdbc;
 
-import fis.criminal.dao.ICriminalCaseDAO;
 import fis.criminal.dao.IStorageDAO;
-import fis.criminal.model.CriminalCase;
 import fis.criminal.model.Storage;
-import fis.criminal.model.enums.CaseType;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

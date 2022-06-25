@@ -2,7 +2,6 @@ package fis.criminal.dao.jdbc;
 
 import fis.criminal.dao.IEvidenceDAO;
 import fis.criminal.dao.mem.MemoryDataSource;
-import fis.criminal.model.CriminalCase;
 import fis.criminal.model.Evidence;
 import org.junit.jupiter.api.Test;
 

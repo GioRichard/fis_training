@@ -2,8 +2,6 @@ package fis.criminal.dao.mem;
 
 import fis.criminal.dao.ICriminalCaseDAO;
 import fis.criminal.model.CriminalCase;
-import lombok.extern.slf4j.Slf4j;
-import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -17,7 +15,7 @@ import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 //@Slf4j
 public class CriminalCaseDAOTest {
@@ -141,7 +139,7 @@ public class CriminalCaseDAOTest {
         void delete() {
             //when
             boolean result = iCriminalCaseDAO.delete(1);
-            assertEquals(false,result);
+            assertFalse(result);
 
         }
 

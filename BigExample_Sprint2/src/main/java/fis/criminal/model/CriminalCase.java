@@ -3,6 +3,7 @@ package fis.criminal.model;
 import fis.criminal.model.enums.CaseStatus;
 import fis.criminal.model.enums.CaseType;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class CriminalCase extends AbstractEntity {
@@ -98,18 +99,18 @@ public class CriminalCase extends AbstractEntity {
 
         CriminalCase that = (CriminalCase) o;
 
-        if (number != null ? !number.equals(that.number) : that.number != null) return false;
+        if (!Objects.equals(number, that.number)) return false;
         if (type != that.type) return false;
-        if (shortDescription != null ? !shortDescription.equals(that.shortDescription) : that.shortDescription != null)
+        if (!Objects.equals(shortDescription, that.shortDescription))
             return false;
-        if (detailedDescription != null ? !detailedDescription.equals(that.detailedDescription) : that.detailedDescription != null)
+        if (!Objects.equals(detailedDescription, that.detailedDescription))
             return false;
         if (status != that.status) return false;
-        if (notes != null ? !notes.equals(that.notes) : that.notes != null) return false;
-        if (evidenceSet != null ? !evidenceSet.equals(that.evidenceSet) : that.evidenceSet != null) return false;
-        if (leadInvestigator != null ? !leadInvestigator.equals(that.leadInvestigator) : that.leadInvestigator != null)
+        if (!Objects.equals(notes, that.notes)) return false;
+        if (!Objects.equals(evidenceSet, that.evidenceSet)) return false;
+        if (!Objects.equals(leadInvestigator, that.leadInvestigator))
             return false;
-        return assigned != null ? assigned.equals(that.assigned) : that.assigned == null;
+        return Objects.equals(assigned, that.assigned);
     }
 
     @Override
