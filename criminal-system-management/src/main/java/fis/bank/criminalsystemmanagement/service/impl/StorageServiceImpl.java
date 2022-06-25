@@ -1,8 +1,8 @@
 package fis.bank.criminalsystemmanagement.service.impl;
 
+import fis.bank.criminalsystemmanagement.model.Storage;
 import fis.bank.criminalsystemmanagement.repository.StorageRepository;
 import fis.bank.criminalsystemmanagement.service.StorageService;
-import fis.bank.criminalsystemmanagement.model.Storage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class StorageServiceImpl implements StorageService {
     private StorageRepository storageRepository;
     @Override
     public void create(Storage storage) {
-        storageRepository.create(storage);
+        storageRepository.save(storage);
 
     }
 

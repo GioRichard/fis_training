@@ -3,7 +3,6 @@ package fis.bank.criminalsystemmanagement.model;
 import fis.bank.criminalsystemmanagement.model.enums.EmploymentStatus;
 import fis.bank.criminalsystemmanagement.model.enums.Rank;
 
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;

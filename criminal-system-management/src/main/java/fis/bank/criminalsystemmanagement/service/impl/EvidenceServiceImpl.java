@@ -1,14 +1,14 @@
 package fis.bank.criminalsystemmanagement.service.impl;
 
+import fis.bank.criminalsystemmanagement.model.Evidence;
 import fis.bank.criminalsystemmanagement.repository.EvidenceRepository;
 import fis.bank.criminalsystemmanagement.service.EvidenceService;
-import fis.bank.criminalsystemmanagement.model.Evidence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@SuppressWarnings("unchecked")
+
 @Service
 public class EvidenceServiceImpl implements EvidenceService {
 
@@ -17,12 +17,12 @@ public class EvidenceServiceImpl implements EvidenceService {
 
     @Override
     public void create(Evidence evidence) {
-        evidenceRepository.save(evidence);
+        evidenceRepository.create(evidence);
     }
 
     @Override
     public Set<Evidence> getALl() {
-        return (Set<Evidence>) evidenceRepository.findAll();
+        return (Set<Evidence>) evidenceRepository.getALl();
     }
 
     @Override

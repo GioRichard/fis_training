@@ -1,17 +1,10 @@
 package fis.bank.criminalsystemmanagement.repository;
 
 import fis.bank.criminalsystemmanagement.model.TrackEntry;
-import fis.bank.criminalsystemmanagement.model.enums.TrackAction;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Date;
-import java.util.Set;
+@Repository
+public interface TrackEntryRepository extends JpaRepository<TrackEntry,Long> {
 
-public interface TrackEntryRepository extends AbstractRepoRepository<TrackEntry>{
-    Set<TrackEntry> findByDetectiveId(Long detectiveId);
-
-    Set<TrackEntry> findByEvidenceId(Long evidenceId);
-
-    Set<TrackEntry> findByDate(Date date);
-
-    Set<TrackEntry> findByDateAndAction(Date date, TrackAction action);
 }

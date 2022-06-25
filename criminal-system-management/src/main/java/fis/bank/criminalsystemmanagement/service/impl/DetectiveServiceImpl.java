@@ -1,8 +1,8 @@
 package fis.bank.criminalsystemmanagement.service.impl;
 
+import fis.bank.criminalsystemmanagement.model.Detective;
 import fis.bank.criminalsystemmanagement.repository.DetectiveRepository;
 import fis.bank.criminalsystemmanagement.service.DetectiveService;
-import fis.bank.criminalsystemmanagement.model.Detective;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

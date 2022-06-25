@@ -25,7 +25,6 @@ public class ExtraDetectiveRepositoryImpl extends DetectiveRepositoryImpl{
             while (rs.next()) {
                 if (detective == null) {
                     detective = new Detective();
-                    // set internal entity identifier (primary key)
                     detective.setId(rs.getLong("id"));
                     detective.setBadgeNumber(rs.getString("badge_number"));
                     detective.setRank(Rank.valueOf(rs.getString("`rank`")));

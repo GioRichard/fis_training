@@ -2,7 +2,6 @@ package fis.bank.criminalsystemmanagement.repository.impl;
 
 import fis.bank.criminalsystemmanagement.core.NotImplementedException;
 import fis.bank.criminalsystemmanagement.model.AbstractEntity;
-import fis.bank.criminalsystemmanagement.model.Detective;
 import fis.bank.criminalsystemmanagement.repository.AbstractRepoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -25,7 +24,7 @@ public class AbstractRepositoryImpl<T extends AbstractEntity> implements Abstrac
     }
 
     @Override
-    public Set<Detective> getALl() {
+    public Set<T> getALl() {
         throw new NotImplementedException("Not needed for this implementation.");
     }
 
