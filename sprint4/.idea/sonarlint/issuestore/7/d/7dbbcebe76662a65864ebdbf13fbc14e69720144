@@ -1,0 +1,15 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8΄…ρα™0
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ό£ηΎόÿÿÿÿ8΄…ρα™0
+g	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8µ…ρα™0
+W
+java:S1141+"5Extract this nested try block into a separate method.(΅»Άόωÿÿÿÿ8µ…ρα™0
+^
+java:S22599"AA "NullPointerException" could be thrown; "con" is nullable here.(Πÿ8Ο…ρα™0
+l
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(εΦ½Ά8Ο…ρα™0
+q
+java:S2095"OUse try-with-resources or close this "CallableStatement" in a "finally" clause.(ΟεΛώÿÿÿÿ8Ο…ρα™0
+„
+java:S4087!"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ιΖ“ϋÿÿÿÿ8Φ…ρα™0
+Z	java:S106U"9Replace this use of System.out or System.err by a logger.(¬Ϋόÿÿÿÿÿ8ή…ρα™0
