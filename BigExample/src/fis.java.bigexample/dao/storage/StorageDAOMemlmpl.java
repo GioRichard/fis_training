@@ -2,7 +2,7 @@ package fis.java.bigexample.dao.storage;
 
 import fis.java.bigexample.model.Storage;
 
-public class DAOStorage implements  IDAOStorage{
+public class StorageDAOMemlmpl implements IStorageDAO {
     @Override
     public void add(Storage storage) {
 
